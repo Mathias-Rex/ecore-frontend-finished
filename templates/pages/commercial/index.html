@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Core Űrjárművek - Kereskedelmi járművek</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+    <style>
+      /* Canvas overlay csak a képekhez */
+      .product-item {
+        position: relative;
+      }
+
+      .product-image-container {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .product-item img {
+        display: block;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+      }
+
+      .smoke-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ========================================
+        NAVIGÁCIÓS SÁV
+        ======================================== -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Logó -->
+        <div class="logo">
+          <a href="../../index.html">
+            <img src="../../assets/logo.png" alt="E-CORE logo" />
+            E-CORE
+          </a>
+        </div>
+
+        <!-- Hamburger menü gomb (csak mobillon látszik) -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Főmenü linkek -->
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../commercial/index.html" class="active">Kereskedelem</a></li>
+          <li><a href="../mining/index.html">Bányászat</a></li>
+          <li><a href="../research/index.html">Kutatás</a></li>
+          <li><a href="../battleships/index.html">Harcászat</a></li>
+          <li><a href="../aboutus/index.html">Rólunk</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ========================================
+        OLDAL FEJLÉC
+        Kategória címe és leírása
+        ======================================== -->
+    <div class="product-header">
+      <h1>Kereskedelmi járművek</h1>
+      <p>Megbízható és hatékony szállítási megoldások az űrben</p>
+    </div>
+
+    <!-- ========================================
+        TERMÉK LISTA
+        6 kereskedelmi űrhajó bemutatása
+        ======================================== -->
+    <section>
+      <div class="container">
+        <div class="products-grid">
+          <!-- TERMÉK 1: Cargo Hauler MK-3 -->
+          <a href="cargo-hauler-mk3.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img src="../../assets/images/cargo-hauler-mk3.jpg" alt="Cargo Hauler MK-3" />
+            </div>
+            <div class="product-info">
+              <h3>Cargo Hauler MK-3</h3>
+              <p>
+                Nagy kapacitású teherhajó bolygóközi áruszállításra. Ideális választás
+                nagykereskedelmi útvonalakhoz és logisztikai műveletekhez.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Rakománytér:</strong> 5000 m³</li>
+                <li><strong>Max. sebesség:</strong> 0.15c</li>
+                <li><strong>Hatótáv:</strong> 50 fényév</li>
+                <li><strong>Legénység:</strong> 8 fő</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- TERMÉK 2: Express Shuttle X-7 -->
+          <a href="express-shuttle-x7.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img src="../../assets/images/express-shuttle-x7.jpg" alt="Express Shuttle X-7" />
+            </div>
+            <div class="product-info">
+              <h3>Express Shuttle X-7</h3>
+              <p>
+                Gyors áruszállító kisebb mennyiségű, értékes teher szállítására. Kiváló
+                manőverezhetőség és sebességi karakterisztika.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Rakománytér:</strong> 800 m³</li>
+                <li><strong>Max. sebesség:</strong> 0.35c</li>
+                <li><strong>Hatótáv:</strong> 30 fényév</li>
+                <li><strong>Legénység:</strong> 3 fő</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- TERMÉK 3: Station Liner SL-9 -->
+          <a href="station-liner-sl9.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img src="../../assets/images/station-liner-sl9.jpg" alt="Station Liner SL-9" />
+            </div>
+            <div class="product-info">
+              <h3>Station Liner SL-9</h3>
+              <p>
+                Utasszállító űrhajó luxuskategóriában. Kényelmes utazás űrállomások és bolygók
+                között, akár 200 utas számára.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Utaskapacitás:</strong> 200 utas</li>
+                <li><strong>Max. sebesség:</strong> 0.25c</li>
+                <li><strong>Hatótáv:</strong> 40 fényév</li>
+                <li><strong>Személyzet:</strong> 25 fő</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- TERMÉK 4: Bulk Transport BT-15 -->
+          <a href="bulk-transport-bt15.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img src="../../assets/images/bulk-transport-bt15.jpg" alt="Bulk Transport BT-15" />
+            </div>
+            <div class="product-info">
+              <h3>Bulk Transport BT-15</h3>
+              <p>
+                Óriási kapacitású szállítóhajó ömlesztett áru és nyersanyagok szállítására.
+                Költséghatékony megoldás nagy mennyiségű rakomány mozgatására.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Rakománytér:</strong> 15000 m³</li>
+                <li><strong>Max. sebesség:</strong> 0.10c</li>
+                <li><strong>Hatótáv:</strong> 45 fényév</li>
+                <li><strong>Legénység:</strong> 12 fő</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- TERMÉK 5: Refrigerated Carrier RC-4 -->
+          <a href="refrigerated-carrier-rc4.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img
+                src="../../assets/images/refrigerated-carrier-rc4.jpg"
+                alt="Refrigerated Carrier RC-4"
+              />
+            </div>
+            <div class="product-info">
+              <h3>Refrigerated Carrier RC-4</h3>
+              <p>
+                Speciális hűtött szállítóhajó élelmiszerek, gyógyszerek és más hőmérséklet-érzékeny
+                áruk szállítására.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Hűtött tér:</strong> 2500 m³</li>
+                <li><strong>Max. sebesség:</strong> 0.20c</li>
+                <li><strong>Hatótáv:</strong> 35 fényév</li>
+                <li><strong>Legénység:</strong> 6 fő</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- TERMÉK 6: Modular Freighter MF-8 -->
+          <a href="modular-freighter-mf8.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img
+                src="../../assets/images/modular-freighter-mf8.jpg"
+                alt="Modular Freighter MF-8"
+              />
+            </div>
+            <div class="product-info">
+              <h3>Modular Freighter MF-8</h3>
+              <p>
+                Moduláris teherhajó, amely igény szerint konfigurálható különböző típusú
+                rakományokhoz. Maximális rugalmasság.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Rakománytér:</strong> 3500 m³ (moduláris)</li>
+                <li><strong>Max. sebesség:</strong> 0.18c</li>
+                <li><strong>Hatótáv:</strong> 38 fényév</li>
+                <li><strong>Legénység:</strong> 7 fő</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+        FOOTER (LÁBLÉC)
+        ======================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>E-CORE Űrjárművek</h4>
+            <p>Az űrutazás következő generációja</p>
+          </div>
+          <div class="footer-section">
+            <h4>Kapcsolat</h4>
+            <p>Email:&nbsp;<a href="mailto:ex.co.or.rre.en@gmail.com">info@ecore-space.com</a></p>
+            <p>Tel: +36 70 724 3066</p>
+            <p>HR:&nbsp;<a href="mailto:ex.co.or.rre.en@gmail.com">karrier@ecore-space.com</a></p>
+          </div>
+          <div class="footer-section">
+            <h4>Gyors linkek</h4>
+            <ul>
+              <li><a href="../aboutus/index.html">Rólunk</a></li>
+              <li><a href="../carreers/index.html">Karrier</a></li>
+              <li><a href="#">Támogatás</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 E-CORE Űrjárművek. Minden jog fenntartva.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========================================
+        SMOKE.JS LIBRARY
+        ======================================== -->
+    <script src="https://cdn.jsdelivr.net/gh/bijection/smoke.js@master/smoke.js"></script>
+
+    <!-- ========================================
+        JAVASCRIPT - Hamburger menü és füst effekt
+        ======================================== -->
+    <script>
+      // ========================================
+      // HAMBURGER MENÜ
+      // ========================================
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+
+      // ========================================
+      // FÜST EFFEKT CSAK A KÉPEKEN
+      // ========================================
+      document.addEventListener('DOMContentLoaded', function () {
+        // Minden kép konténer
+        const imageContainers = document.querySelectorAll('.product-image-container');
+
+        imageContainers.forEach(container => {
+          const canvas = container.querySelector('.smoke-canvas');
+          const img = container.querySelector('img');
+
+          if (!canvas || !img) return;
+
+          // Várunk, amíg a kép betöltődik
+          const initSmoke = () => {
+            canvas.width = img.offsetWidth;
+            canvas.height = img.offsetHeight;
+
+            const ctx = canvas.getContext('2d');
+
+            // Világosabb, áttetsző szürke füst
+            const smokeColor = [180, 180, 180];
+            const smokeMachine = SmokeMachine(ctx, smokeColor);
+
+            smokeMachine.start();
+
+            // Füst intenzitás változó
+            let smokeIntensity = 1; // Alapból kevesebb füst (50%)
+            let targetIntensity = 0.75;
+
+            // Egér mozgás követése a KÉPEN
+            container.addEventListener('mouseenter', () => {
+              targetIntensity = 0.25; // Még kevesebb füst (15%)
+            });
+
+            container.addEventListener('mouseleave', () => {
+              targetIntensity = 0.5; // Vissza 50%-ra
+            });
+
+            // Lassabb animációs loop
+            let lastTime = Date.now();
+
+            function animate() {
+              const currentTime = Date.now();
+              const deltaTime = currentTime - lastTime;
+              lastTime = currentTime;
+
+              // Smooth transition
+              smokeIntensity += (targetIntensity - smokeIntensity) * 0.03;
+
+              // RITKÁBBAN ad hozzáa C:\Projects\2025_Hack-Code_ecore_web\pages\commercial\index.html pagehez hozzáadtam füstöt, kérlek ugyanígy készítsd el, a hozzáadott füstöt a C:\Projects\2025_Hack-Code_ecore_web\pages\research\index.html oldalt is füstöt (kisebb valószínűség)
+              if (Math.random() < smokeIntensity * 0.12) {
+                // 0.3 helyett 0.12
+                const x = Math.random() * canvas.width;
+                const y = canvas.height - 10;
+                const particleCount = 1; // Mindig csak 1 részecske
+
+                smokeMachine.addsmoke(x, y, particleCount);
+              }
+
+              // LASSABB füst mozgás (0.8 helyett 0.3)
+              smokeMachine.step(deltaTime * 0.3);
+
+              requestAnimationFrame(animate);
+            }
+
+            animate();
+          };
+
+          if (img.complete) {
+            initSmoke();
+          } else {
+            img.addEventListener('load', initSmoke);
+          }
+        });
+
+        // Ablak átméretezés
+        window.addEventListener('resize', () => {
+          imageContainers.forEach(container => {
+            const canvas = container.querySelector('.smoke-canvas');
+            const img = container.querySelector('img');
+
+            if (canvas && img) {
+              canvas.width = img.offsetWidth;
+              canvas.height = img.offsetHeight;
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

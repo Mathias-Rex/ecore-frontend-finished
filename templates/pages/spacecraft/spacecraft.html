@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Űrhajó - E-Core Űrjárművek</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="../../index.html">
+            <img src="../../assets/logo.png" alt="E-CORE logo" />
+            E-CORE
+          </a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../commercial/index.html">Kereskedelem</a></li>
+          <li><a href="../mining/index.html">Bányászat</a></li>
+          <li><a href="../research/index.html">Kutatás</a></li>
+          <li><a href="../battleships/index.html">Harcászat</a></li>
+          <li><a href="../aboutus/index.html">Rólunk</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="ship-detail">
+      <div class="container">
+        <a href="#" id="back-link" class="back-button">← Vissza</a>
+
+        <div id="loading" class="loading-state">
+          <p>Betöltés...</p>
+        </div>
+
+        <div id="error" class="error-state" style="display: none">
+          <p>Hiba történt az adatok betöltése közben.</p>
+        </div>
+
+        <div id="content" style="display: none">
+          <div class="ship-header">
+            <div class="ship-image-large">
+              <canvas class="smoke-canvas"></canvas>
+              <img id="ship-image" src="" alt="" />
+            </div>
+            <div class="ship-title-section">
+              <h1 id="ship-name"></h1>
+              <p id="ship-category" class="ship-category"></p>
+              <p id="ship-tagline" class="ship-tagline"></p>
+            </div>
+          </div>
+
+          <div class="ship-content">
+            <div class="ship-description">
+              <h2>Áttekintés</h2>
+              <p id="ship-overview"></p>
+              <p id="ship-additional"></p>
+
+              <h3>Főbb jellemzők</h3>
+              <ul id="ship-features" class="features-list"></ul>
+
+              <h3>Alkalmazási területek</h3>
+              <p id="ship-applications"></p>
+            </div>
+
+            <div class="ship-specs-detailed">
+              <h2>Műszaki specifikációk</h2>
+              <div id="ship-specs"></div>
+
+              <div class="price-section">
+                <h3>Ár és elérhetőség</h3>
+                <p id="ship-price" class="price"></p>
+                <p id="ship-availability" class="availability"></p>
+                <button class="cta-button">Ajánlatot kérek</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>E-CORE Űrjárművek</h4>
+            <p>Az űrutazás következő generációja</p>
+          </div>
+          <div class="footer-section">
+            <h4>Kapcsolat</h4>
+            <p>Email:&nbsp;<a href="mailto:info@ecore-space.com">info@ecore-space.com</a></p>
+            <p>Tel: +36 70 724 3066</p>
+            <p>HR:&nbsp;<a href="mailto:karrier@ecore-space.com">karrier@ecore-space.com</a></p>
+          </div>
+          <div class="footer-section">
+            <h4>Gyors linkek</h4>
+            <ul>
+              <li><a href="../aboutus/index.html">Rólunk</a></li>
+              <li><a href="../carreers/index.html">Karrier</a></li>
+              <li><a href="#">Támogatás</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 E-CORE Űrjárművek. Minden jog fenntartva.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+      document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/bijection/smoke.js@master/smoke.js"></script>
+    <script>
+      const categoryMap = {
+        commercial: '../commercial/index.html',
+        mining: '../mining/index.html',
+        research: '../research/index.html',
+        battleship: '../battleships/index.html',
+        battleships: '../battleships/index.html',
+      };
+
+      async function getSpacecraftId() {
+        const path = window.location.pathname;
+        const match = path.match(/\/spacecraft\/(\d+)/);
+        if (match) return match[1];
+        const filename = path.split('/').pop().replace('.html', '');
+        const response = await fetch(
+          'https://ecore-backend-production.up.railway.app/api/spacecrafts'
+        );
+        const data = await response.json();
+        const craft = data.find(s => s.name.toLowerCase().replace(/\s+/g, '-') === filename);
+        return craft ? craft.id : null;
+      }
+
+      function getCategoryIndex(type) {
+        return categoryMap[type] || '../index.html';
+      }
+
+      function renderSpecs(specs, pricing) {
+        let html = '';
+
+        const sectionTitles = {
+          performance: 'Teljesítmény',
+          mining: 'Bányászat',
+          cargo: 'Rakterhelés',
+          lab: 'Laboratórium',
+          observatory: 'Megfigyelés',
+          capacity: 'Kapacitás',
+          armament: 'Fegyverzet',
+          crew: 'Legénység',
+          dimensions: 'Dimenzió és tömeg',
+          extraction: 'Kitermelés',
+          processing: ' Feldolgozás',
+          mapping: 'Térképészet',
+          sensors: 'Szenzorok',
+          system: 'Rendszer',
+          research: 'Kutatás',
+          cooling: 'Hűtés',
+        };
+
+        const specLabels = {
+          maxSpeed: 'Maximális sebesség',
+          acceleration: 'Gyorsulás',
+          range: 'Hatótáv',
+          engine: 'Hajtómű',
+          energy: 'Energia',
+          fuel: 'Üzemanyag',
+          endurance: 'Üzemidő',
+          stabilization: 'Stabilizáció',
+          crew: 'Legénység',
+          cabins: 'Kabinok',
+          lifeSupport: 'Életfenntartás',
+          common: 'Közös terek',
+          autonomy: 'Autonómia',
+          comfort: 'Kényelem',
+          security: 'Biztonság',
+          communication: 'Kommunikáció',
+          laboratory: 'Laboratórium',
+          scanner: 'Szkennelés',
+          documentation: 'Dokumentáció',
+          data: 'Adattárolás',
+          extraction: 'Kitermelés',
+          processing: 'Feldolgozás',
+          chamber: 'Kamra',
+          dock: 'Dockolás',
+          space: 'Tér',
+          maxLoad: 'Max terhelés',
+          type: 'Típus',
+          docking: 'Dockolás',
+          controller: 'Kontroller',
+          telescope: 'Teleszkóp',
+          sensors: 'Szenzorok',
+          network: 'Hálózat',
+          passengers: 'Utasok',
+          cargo: 'Rakterhelés',
+          cabin: 'Kabin',
+          connection: 'Kapcsolat',
+          lasers: 'Lézerek',
+          missiles: 'Rakéták',
+          drones: 'Drónok',
+          attack: 'Támadás',
+          ai: 'AI',
+          defense: 'Védelem',
+          armament: 'Fegyverzet',
+          length: 'Hossz',
+          width: 'Szélesség',
+          height: 'Magasság',
+          emptyMass: 'Üres tömeg',
+          depth: 'Mélység',
+          extract: 'Kitermelés',
+          stabilizers: 'Stabilizátorok',
+          extractors: 'Kitermelők',
+          storage: 'Tárolás',
+          coolingCapacity: 'Hűtési kapacitás',
+          system: 'Rendszer',
+          automation: 'Automatizálás',
+          sensor: 'Szenzor',
+          management: 'Menedzsment',
+          resolution: 'Felbontás',
+          atmosphere: 'Atmoszféra',
+          scanning: 'Szkennelés',
+          detection: 'Detektálás',
+          endurance: 'Kitartás',
+          emergency: 'Vészhelyzet',
+          mining: 'Bányászat',
+          gasExtraction: 'Gázkitermelés',
+          chambers: 'Kamrák',
+          refillModule: 'Utántöltő modul',
+          lasers: 'Lézerek',
+          aggressivePack: 'Agresszív csomag',
+          support: 'Támogatás',
+          denyReplay: 'Anti-replay',
+          complement: 'Kiegészítés',
+          coOp: 'Együttműködés',
+          logistics: 'Logisztika',
+          warehouse: 'Raktár',
+          operations: 'Operációk',
+          operator: 'Üzemeltető',
+          cabin: 'Kabin',
+          payload: 'Hasznos teher',
+          special: 'Speciális',
+          hangar: 'Hangár',
+        };
+
+        for (const [key, value] of Object.entries(specs)) {
+          const title = sectionTitles[key] || key.charAt(0).toUpperCase() + key.slice(1);
+          html += `<div class="spec-section"><h4>${title}</h4><table class="specs-table">`;
+
+          for (const [specKey, specValue] of Object.entries(value)) {
+            const label = specLabels[specKey] || specKey;
+            const displayValue =
+              typeof specValue === 'object' ? JSON.stringify(specValue) : specValue;
+            html += `<tr><td>${label}</td><td>${displayValue}</td></tr>`;
+          }
+
+          html += '</table></div>';
+        }
+
+        html += `<div class="spec-section"><h4>Dimenzió és tömeg</h4><table class="specs-table">`;
+        if (specs.dimensions) {
+          for (const [key, value] of Object.entries(specs.dimensions)) {
+            const label = specLabels[key] || key;
+            html += `<tr><td>${label}</td><td>${value}</td></tr>`;
+          }
+        }
+        html += '</table></div>';
+
+        return html;
+      }
+
+      function renderFeatures(features) {
+        const emojis = {
+          telemetry: '📡',
+          laboratory: '🔬',
+          drone: '🛸',
+          ar: '📱',
+          radiation: '☢️',
+          'clean-room': '🧹',
+          ai: '🤖',
+          ion: '⚡',
+          laser: '🎯',
+          missile: '🚀',
+          quantum: '⚛️',
+          plasma: '🔥',
+          graviton: '🌀',
+          hyper: '⚡',
+          multi: '📊',
+          dual: '🔄',
+          modular: '🔧',
+          adaptive: '🎛️',
+          'self-repair': '🔧',
+          sensor: '📡',
+          satellite: '🛰️',
+          relay: '📡',
+          telescope: '🔭',
+          holographic: '👁️',
+          nan: '⚛️',
+          drone: '🛸',
+          excavator: '⛏️',
+          cryo: '❄️',
+          hydro: '💧',
+          gas: '🌫️',
+          ice: '🧊',
+          stealth: '👻',
+          cargo: '📦',
+          military: '🎖️',
+          defense: '🛡️',
+          railgun: '💥',
+          heavy: '⚓',
+          shield: '🛡️',
+          commander: '👨‍✈️',
+          crew: '👥',
+        };
+
+        return features
+          .map(f => {
+            const lower = f.toLowerCase();
+            let emoji = '🚀';
+            for (const [key, e] of Object.entries(emojis)) {
+              if (lower.includes(key)) {
+                emoji = e;
+                break;
+              }
+            }
+            return `<li>${emoji} ${f}</li>`;
+          })
+          .join('');
+      }
+
+      async function initSmoke() {
+        const container = document.querySelector('.ship-image-large');
+        if (!container) return;
+        const canvas = container.querySelector('.smoke-canvas');
+        const img = container.querySelector('img');
+        if (!canvas || !img) return;
+        const init = () => {
+          canvas.width = img.offsetWidth;
+          canvas.height = img.offsetHeight;
+          const ctx = canvas.getContext('2d');
+          const smokeMachine = SmokeMachine(ctx, [180, 180, 180]);
+          smokeMachine.start();
+          let smokeIntensity = 1;
+          let targetIntensity = 0.75;
+          let lastTime = Date.now();
+          function animate() {
+            const currentTime = Date.now();
+            const deltaTime = currentTime - lastTime;
+            lastTime = currentTime;
+            smokeIntensity += (targetIntensity - smokeIntensity) * 0.03;
+            if (Math.random() < smokeIntensity * 0.12) {
+              const x = Math.random() * canvas.width;
+              const y = canvas.height - 10;
+              smokeMachine.addsmoke(x, y, 1);
+            }
+            smokeMachine.step(deltaTime * 0.3);
+            requestAnimationFrame(animate);
+          }
+          animate();
+        };
+        if (img.complete) init();
+        else img.addEventListener('load', init);
+      }
+
+      async function loadSpacecraft() {
+        const loadingEl = document.getElementById('loading');
+        const errorEl = document.getElementById('error');
+        const contentEl = document.getElementById('content');
+
+        try {
+          const id = await getSpacecraftId();
+          if (!id) {
+            throw new Error('Azonosító nem található');
+          }
+
+          const response = await fetch(
+            `https://ecore-backend-production.up.railway.app/api/spacecrafts/${id}`,
+            {
+              credentials: 'omit',
+              headers: {
+                Accept: 'application/json',
+              },
+            }
+          );
+
+          if (!response.ok) {
+            throw new Error('API hiba');
+          }
+
+          const data = await response.json();
+
+          document.title = `${data.name} - E-Core Űrjárművek`;
+
+          document.getElementById('back-link').href = getCategoryIndex(data.type);
+          document.getElementById('ship-image').src =
+            data.image || `../../assets/images/placeholder.jpg`;
+          document.getElementById('ship-image').alt = data.name;
+          document.getElementById('ship-name').textContent = data.name;
+          document.getElementById('ship-category').textContent = data.category || '';
+          document.getElementById('ship-tagline').textContent = data.tagline || '';
+          document.getElementById('ship-overview').textContent = data.description?.overview || '';
+          document.getElementById('ship-additional').textContent =
+            data.description?.additional || '';
+          document.getElementById('ship-applications').textContent =
+            data.description?.applications || '';
+
+          const featuresEl = document.getElementById('ship-features');
+          featuresEl.innerHTML = renderFeatures(data.features || []);
+
+          document.getElementById('ship-specs').innerHTML = renderSpecs(
+            data.specs || {},
+            data.pricing || {}
+          );
+
+          document.getElementById('ship-price').textContent = data.pricing?.price || 'Ár: Megkeres';
+          document.getElementById('ship-availability').textContent =
+            data.pricing?.availability || '';
+
+          loadingEl.style.display = 'none';
+          contentEl.style.display = 'block';
+
+          initSmoke();
+        } catch (err) {
+          console.error('Error:', err);
+          loadingEl.style.display = 'none';
+          errorEl.style.display = 'block';
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', loadSpacecraft);
+    </script>
+  </body>
+</html>

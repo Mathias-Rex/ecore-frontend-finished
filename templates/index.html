@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Core Űrjárművek - Főoldal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <style>
+      .category-card {
+        position: relative;
+      }
+
+      .product-image-container {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .category-card img {
+        display: block;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+      }
+
+      .smoke-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ========================================
+         NAVIGÁCIÓS SÁV
+         Ez a menü minden oldalon megjelenik
+         ======================================== -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Logó -->
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/logo.png" alt="E-CORE logo" />
+            E-CORE
+          </a>
+        </div>
+
+        <!-- Hamburger menü gomb (csak mobillon látszik) -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Főmenü linkek -->
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="pages/commercial/index.html">Kereskedelem</a></li>
+          <li><a href="pages/mining/index.html">Bányászat</a></li>
+          <li><a href="pages/research/index.html">Kutatás</a></li>
+          <li><a href="pages/battleships/index.html">Harcászat</a></li>
+          <li><a href="pages/aboutus/index.html">Rólunk</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ========================================
+         HERO SZEKCIÓ
+         Főoldal fejléc cím, szöveg és kép
+         ======================================== -->
+    <header class="hero">
+      <!-- Particles háttér animáció -->
+      <div id="particles-js"></div>
+
+      <!-- Bal oldal: Szöveges tartalom -->
+      <div class="hero-content">
+        <h1>E-CORE Űrjárművek</h1>
+        <p class="hero-subtitle">A jövő űrtechnológiája, ma</p>
+        <p class="hero-description">
+          Innovatív megoldások az űr meghódításához. Kereskedelmi, bányászati, kutatási és védelmi
+          járművek tervezése és gyártása.
+        </p>
+        <!-- CTA gomb termékekhez ugrás -->
+        <a href="#products" class="cta-button">Fedezze fel járműveinket</a>
+      </div>
+
+      <!-- Jobb oldal: Hero kép -->
+      <div class="hero-image">
+        <img src="assets/images/hero-spacecraft.jpg" alt="E-Core űrjármű" />
+      </div>
+    </header>
+
+    <!-- ========================================
+         FUNKCIÓK SZEKCIÓ
+         Miért válassza az E-CORE-t?
+         ======================================== -->
+    <section class="features">
+      <div class="container">
+        <h2>Miért válassza az E-CORE-t?</h2>
+
+        <!-- 3 oszlopos feature grid -->
+        <div class="feature-grid">
+          <!-- Feature 1: Technológia -->
+          <div class="feature-card">
+            <img src="assets/images/icon-innovation.jpg" alt="Innováció ikon" />
+            <h3>Élvonalbeli technológia</h3>
+            <p>
+              Legmodernebb hajtóművek és navigációs rendszerek, amelyek újradefiniálják az
+              űrutazást.
+            </p>
+          </div>
+
+          <!-- Feature 2: Megbízhatóság -->
+          <div class="feature-card">
+            <img src="assets/images/icon-reliability.jpg" alt="Megbízhatóság ikon" />
+            <h3>Megbízhatóság</h3>
+            <p>Több mint 25 év tapasztalat az űriparban, több ezer sikeres küldetéssel.</p>
+          </div>
+
+          <!-- Feature 3: Testreszabhatóság -->
+          <div class="feature-card">
+            <img src="assets/images/icon-customization.jpg" alt="Testreszabás ikon" />
+            <h3>Testreszabhatóság</h3>
+            <p>Minden járművünk az Ön egyedi igényeihez igazítható moduláris rendszerrel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         TERMÉK KATEGÓRIÁK
+         4 fő termékvonal bemutatása
+         ======================================== -->
+    <section id="products" class="products">
+      <div class="container">
+        <h2>Termékkategóriák</h2>
+
+        <!-- Kategória grid - kattintható kártyák -->
+        <div class="product-categories">
+          <!-- Kategória 1: Kereskedelmi járművek -->
+          <a href="pages/commercial/index.html" class="category-card">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img src="assets/images/category-commerce.jpg" alt="Kereskedelmi járművek" />
+            </div>
+            <h3>Kereskedelmi járművek</h3>
+            <p>Hatékony szállítási megoldások bolygók és állomások között</p>
+          </a>
+
+          <!-- Kategória 2: Bányászati járművek -->
+          <a href="pages/mining/index.html" class="category-card">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img src="assets/images/category-mining.jpg" alt="Bányászati járművek" />
+            </div>
+            <h3>Bányászati járművek</h3>
+            <p>Speciális felszerelések aszteroida és bolygó bányászathoz</p>
+          </a>
+
+          <!-- Kategória 3: Kutatási járművek -->
+          <a href="pages/research/index.html" class="category-card">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img src="assets/images/category-research.jpg" alt="Kutatási járművek" />
+            </div>
+            <h3>Kutatási járművek</h3>
+            <p>Fejlett szenzorokkal felszerelt felfedező űrhajók</p>
+          </a>
+
+          <!-- Kategória 4: Harcászati járművek -->
+          <a href="pages/battleships/index.html" class="category-card">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img src="assets/images/category-combat.jpg" alt="Harcászati járművek" />
+            </div>
+            <h3>Harcászati járművek</h3>
+            <p>Védelmi és biztonsági célú űrjárművek</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         VIDEÓ SZEKCIÓ
+         Gyártósor bemutató videó
+         ======================================== -->
+    <section class="video-section">
+      <div class="container">
+        <h2>Tekintse meg gyártósorunkat működés közben</h2>
+        <div class="video-container">
+          <video id="factoryVideo" class="factory-video" autoplay muted loop playsinline>
+            <source src="assets/videos/factory_forward_reverse.mp4" type="video/mp4" />
+            A böngésző nem támogatja a videó lejátszást.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER (LÁBLÉC)
+         Kapcsolati információk és linkek
+         ======================================== -->
+    <footer class="footer">
+      <div class="container">
+        <!-- Footer tartalom - 3 oszlop -->
+        <div class="footer-content">
+          <!-- Oszlop 1: Cég info -->
+          <div class="footer-section">
+            <h4>E-CORE Űrjárművek</h4>
+            <p>Az űrutazás következő generációja</p>
+          </div>
+
+          <!-- Oszlop 2: Kapcsolat -->
+          <div class="footer-section">
+            <h4>Kapcsolat</h4>
+            <p>Email:&nbsp;<a href="mailto:ex.co.or.rre.en@gmail.com">info@ecore-space.com</a></p>
+            <p>Tel: +36 70 724 3066</p>
+            <p>HR:&nbsp;<a href="mailto:ex.co.or.rre.en@gmail.com">karrier@ecore-space.com</a></p>
+          </div>
+
+          <!-- Oszlop 3: Gyors linkek -->
+          <div class="footer-section">
+            <h4>Gyors linkek</h4>
+            <ul>
+              <li><a href="pages/aboutus/index.html">Rólunk</a></li>
+              <li><a href="pages/carreers/index.html">Karrier</a></li>
+              <li><a href="#">Támogatás</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright sor -->
+        <div class="footer-bottom">
+          <p>&copy; 2026 E-CORE Űrjárművek. Minden jog fenntartva.</p>
+        </div>
+      </div>
+    </footer>
+    <!--  -->
+    <!-- ========================================
+         PARTICLES.JS LIBRARY
+         ======================================== -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- ========================================
+         JAVASCRIPT - Particles, Hamburger, Videó
+         ======================================== -->
+    <script>
+      // ========================================
+      // PARTICLES.JS KONFIGURÁCIÓ
+      // ========================================
+      if (typeof particlesJS !== 'undefined') {
+        particlesJS('particles-js', {
+          particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: '#8c8c8c' },
+            shape: {
+              type: 'circle',
+              stroke: { width: 0, color: '#000000' },
+            },
+            opacity: {
+              value: 0.2,
+              random: false,
+              anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
+            },
+            size: {
+              value: 4,
+              random: true,
+              anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+            },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: '#6b6b6b',
+              opacity: 0.2,
+              width: 1,
+            },
+            move: {
+              enable: true,
+              speed: 6,
+              direction: 'none',
+              random: false,
+              straight: false,
+              out_mode: 'out',
+              bounce: false,
+            },
+          },
+          interactivity: {
+            detect_on: 'canvas',
+            events: {
+              onhover: { enable: true, mode: 'repulse' },
+              onclick: { enable: true, mode: 'push' },
+              resize: true,
+            },
+            modes: {
+              repulse: { distance: 200, duration: 0.4 },
+              push: { particles_nb: 4 },
+            },
+          },
+          retina_detect: true,
+        });
+      }
+
+      // ========================================
+      // HAMBURGER MENÜ
+      // ========================================
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/bijection/smoke.js@master/smoke.js"></script>
+
+    <!-- ========================================
+        JAVASCRIPT - Füst effektek a Termékkategóriák kártyáin
+        ======================================== -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const imageContainers = document.querySelectorAll('.product-image-container');
+
+        imageContainers.forEach(container => {
+          const canvas = container.querySelector('.smoke-canvas');
+          const img = container.querySelector('img');
+
+          if (!canvas || !img) return;
+
+          const initSmoke = () => {
+            canvas.width = img.offsetWidth;
+            canvas.height = img.offsetHeight;
+
+            const ctx = canvas.getContext('2d');
+            const smokeColor = [180, 180, 180];
+            const smokeMachine = SmokeMachine(ctx, smokeColor);
+
+            smokeMachine.start();
+
+            let smokeIntensity = 1;
+            let targetIntensity = 0.75;
+            let lastTime = Date.now();
+
+            container.addEventListener('mouseenter', () => {
+              targetIntensity = 0.25;
+            });
+
+            container.addEventListener('mouseleave', () => {
+              targetIntensity = 0.5;
+            });
+
+            function animate() {
+              const currentTime = Date.now();
+              const deltaTime = currentTime - lastTime;
+              lastTime = currentTime;
+
+              smokeIntensity += (targetIntensity - smokeIntensity) * 0.03;
+
+              if (Math.random() < smokeIntensity * 0.12) {
+                const x = Math.random() * canvas.width;
+                const y = canvas.height - 10;
+                const particleCount = 1;
+
+                smokeMachine.addsmoke(x, y, particleCount);
+              }
+
+              smokeMachine.step(deltaTime * 0.3);
+
+              requestAnimationFrame(animate);
+            }
+
+            animate();
+          };
+
+          if (img.complete) {
+            initSmoke();
+          } else {
+            img.addEventListener('load', initSmoke);
+          }
+        });
+
+        window.addEventListener('resize', () => {
+          imageContainers.forEach(container => {
+            const canvas = container.querySelector('.smoke-canvas');
+            const img = container.querySelector('img');
+
+            if (canvas && img) {
+              canvas.width = img.offsetWidth;
+              canvas.height = img.offsetHeight;
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

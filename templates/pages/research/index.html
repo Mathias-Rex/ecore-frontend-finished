@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Core Űrjárművek - Kutatási járművek</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+    <style>
+      .product-item {
+        position: relative;
+      }
+
+      .product-image-container {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .product-item img {
+        display: block;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+      }
+
+      .smoke-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ========================================
+         NAVIGÁCIÓS SÁV
+         ======================================== -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Logó -->
+        <div class="logo">
+          <a href="../../index.html">
+            <img src="../../assets/logo.png" alt="E-CORE logo" />
+            E-CORE
+          </a>
+        </div>
+
+        <!-- Hamburger menü gomb (csak mobillon látszik) -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Főmenü linkek -->
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../commercial/index.html">Kereskedelem</a></li>
+          <li><a href="../mining/index.html">Bányászat</a></li>
+          <li><a href="../research/index.html" class="active">Kutatás</a></li>
+          <li><a href="../battleships/index.html">Harcászat</a></li>
+          <li><a href="../aboutus/index.html">Rólunk</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ========================================
+         OLDAL FEJLÉC
+         Kutatási járművek kategória bemutatása
+         ======================================== -->
+    <div class="product-header">
+      <h1>Kutatási járművek</h1>
+      <p>Fejlett szenzorokkal felszerelt felfedező űrhajók</p>
+    </div>
+
+    <!-- ========================================
+         TERMÉK LISTA
+         6 kutatási űrhajó bemutatása
+         ======================================== -->
+    <section>
+      <div class="container">
+        <div class="products-grid">
+          <!-- TERMÉK 1: Explorer Class EC-10 -->
+          <!-- Sokoldalú hosszú távú kutatóhajó -->
+          <a href="explorer-class-ec10.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img src="../../assets/images/explorer-class-ec10.jpg" alt="Explorer Class EC-10" />
+            </div>
+            <div class="product-info">
+              <h3>Explorer Class EC-10</h3>
+              <p>
+                Sokoldalú kutatóhajó hosszú távú felfedező küldetésekhez. Komplett tudományos
+                laboratórium és megfigyelő eszközök.
+              </p>
+              <!-- Műszaki specifikációk -->
+              <ul class="product-specs">
+                <li><strong>Hatótáv:</strong> 100 fényév</li>
+                <li><strong>Autonómia:</strong> 5 év</li>
+                <li><strong>Max. sebesség:</strong> 0.40c</li>
+                <li><strong>Tudományos személyzet:</strong> 45 fő</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- TERMÉK 2: Planetary Survey PS-6 -->
+          <!-- Bolygókutató jármű -->
+          <a href="planetary-survey-ps6.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img src="../../assets/images/planetary-survey-ps6.jpg" alt="Planetary Survey PS-6" />
+            </div>
+            <div class="product-info">
+              <h3>Planetary Survey PS-6</h3>
+              <p>
+                Specializált bolygókutató jármű felszíni és atmoszferikus vizsgálatokhoz. Orbitális
+                és légköri kutatási képesség.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Szkennelési felbontás:</strong> 10 cm</li>
+                <li><strong>Légköri mélység:</strong> 500 km</li>
+                <li><strong>Autonómia:</strong> 3 év</li>
+                <li><strong>Személyzet:</strong> 20 fő</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- TERMÉK 3: Deep Space Observatory DSO-3 -->
+          <!-- Mobil űrobszervatórium -->
+          <a href="deep-space-observatory-dso3.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img
+                src="../../assets/images/deep-space-observatory-dso.jpg"
+                alt="Deep Space Observatory DSO-3"
+              />
+            </div>
+            <div class="product-info">
+              <h3>Deep Space Observatory DSO-3</h3>
+              <p>
+                Mobil űrobszervatórium csillagászati megfigyelésekhez és jelenségek
+                tanulmányozásához. Extrém távoli objektumok vizsgálata.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Teleszkóp átmérő:</strong> 25 méter</li>
+                <li><strong>Megfigyelési hatótáv:</strong> 500 fényév</li>
+                <li><strong>Működési idő:</strong> 10 év</li>
+                <li><strong>Személyzet:</strong> 15 fő</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- TERMÉK 4: Xenobiology Lab XL-4 -->
+          <!-- Biológiai kutatólaboratórium -->
+          <a href="xenobiology-lab-xl4.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img src="../../assets/images/xenobiology-lab-xl4.jpg" alt="Xenobiology Lab XL-4" />
+            </div>
+            <div class="product-info">
+              <h3>Xenobiology Lab XL-4</h3>
+              <p>
+                Biológiai kutatólaboratórium idegen életformák tanulmányozására. Karantén szobák és
+                teljes biológiai elemző felszerelés.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Laboratórium méret:</strong> 2000 m²</li>
+                <li><strong>Biztonsági szint:</strong> BSL-4</li>
+                <li><strong>Mintakapacitás:</strong> 10,000 példány</li>
+                <li><strong>Személyzet:</strong> 30 fő</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- TERMÉK 5: Quantum Research Vessel QRV-2 -->
+          <!-- Kvantumfizikai kutatóhajó -->
+          <a href="quantum-research-vessel-qrv2.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img
+                src="../../assets/images/quantum-research-vessel-qrv.jpg"
+                alt="Quantum Research Vessel QRV-2"
+              />
+            </div>
+            <div class="product-info">
+              <h3>Quantum Research Vessel QRV-2</h3>
+              <p>
+                Kvantumfizikai kísérletekhez tervezett kutatóhajó. Fekete lyukak, neutron csillagok
+                és egyéb extrém jelenségek vizsgálata.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Sugárvédelem:</strong> Extrém szint</li>
+                <li><strong>Gravitációs tűrés:</strong> 100g</li>
+                <li><strong>Autonómia:</strong> 7 év</li>
+                <li><strong>Személyzet:</strong> 25 fő</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- TERMÉK 6: Archaeological Surveyor AS-8 -->
+          <!-- Régészeti kutatóhajó -->
+          <a href="archaeological-surveyor-as8.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img
+                src="../../assets/images/archaeological-surveyor-as8.jpg"
+                alt="Archaeological Surveyor AS-8"
+              />
+            </div>
+            <div class="product-info">
+              <h3>Archaeological Surveyor AS-8</h3>
+              <p>
+                Specializált régészeti kutatóhajó ősi civilizációk maradványainak felkutatására és
+                dokumentálására.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Szkennelési mélység:</strong> 2 km</li>
+                <li><strong>3D rekonstrukció:</strong> Igen</li>
+                <li><strong>Mintavételi rendszer:</strong> Precíziós</li>
+                <li><strong>Személyzet:</strong> 35 fő</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER (LÁBLÉC)
+         ======================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>E-CORE Űrjárművek</h4>
+            <p>Az űrutazás következő generációja</p>
+          </div>
+          <div class="footer-section">
+            <h4>Kapcsolat</h4>
+            <p>Email:&nbsp;<a href="mailto:ex.co.or.rre.en@gmail.com">info@ecore-space.com</a></p>
+            <p>Tel: +36 70 724 3066</p>
+            <p>HR:&nbsp;<a href="mailto:ex.co.or.rre.en@gmail.com">karrier@ecore-space.com</a></p>
+          </div>
+          <div class="footer-section">
+            <h4>Gyors linkek</h4>
+            <ul>
+              <li><a href="../aboutus/index.html">Rólunk</a></li>
+              <li><a href="../carreers/index.html">Karrier</a></li>
+              <li><a href="#">Támogatás</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 E-CORE Űrjárművek. Minden jog fenntartva.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========================================
+        JAVASCRIPT - Hamburger menü működése
+        ======================================== -->
+    <script>
+      // Hamburger menü elemek kiválasztása
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+
+      // Kattintás eseménykezelő a hamburger gombra
+      hamburger.addEventListener('click', () => {
+        // Toggle (kapcsoló) az aktív osztályokra
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      // Menü bezárása, ha egy linkre kattintunk
+      document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/bijection/smoke.js@master/smoke.js"></script>
+
+    <!-- ========================================
+        JAVASCRIPT - Füst effekt a kutatási jármű képeken
+        ======================================== -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const imageContainers = document.querySelectorAll('.product-image-container');
+
+        imageContainers.forEach(container => {
+          const canvas = container.querySelector('.smoke-canvas');
+          const img = container.querySelector('img');
+
+          if (!canvas || !img) return;
+
+          const initSmoke = () => {
+            canvas.width = img.offsetWidth;
+            canvas.height = img.offsetHeight;
+
+            const ctx = canvas.getContext('2d');
+            const smokeColor = [180, 180, 180];
+            const smokeMachine = SmokeMachine(ctx, smokeColor);
+
+            smokeMachine.start();
+
+            let smokeIntensity = 1;
+            let targetIntensity = 0.75;
+            let lastTime = Date.now();
+
+            container.addEventListener('mouseenter', () => {
+              targetIntensity = 0.25;
+            });
+
+            container.addEventListener('mouseleave', () => {
+              targetIntensity = 0.5;
+            });
+
+            function animate() {
+              const currentTime = Date.now();
+              const deltaTime = currentTime - lastTime;
+              lastTime = currentTime;
+
+              smokeIntensity += (targetIntensity - smokeIntensity) * 0.03;
+
+              if (Math.random() < smokeIntensity * 0.12) {
+                const x = Math.random() * canvas.width;
+                const y = canvas.height - 10;
+                const particleCount = 1;
+
+                smokeMachine.addsmoke(x, y, particleCount);
+              }
+
+              smokeMachine.step(deltaTime * 0.3);
+
+              requestAnimationFrame(animate);
+            }
+
+            animate();
+          };
+
+          if (img.complete) {
+            initSmoke();
+          } else {
+            img.addEventListener('load', initSmoke);
+          }
+        });
+
+        window.addEventListener('resize', () => {
+          imageContainers.forEach(container => {
+            const canvas = container.querySelector('.smoke-canvas');
+            const img = container.querySelector('img');
+
+            if (canvas && img) {
+              canvas.width = img.offsetWidth;
+              canvas.height = img.offsetHeight;
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

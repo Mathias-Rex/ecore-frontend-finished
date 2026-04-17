@@ -1,0 +1,1241 @@
+{
+  "spacecrafts": [
+    {
+      "id": 1,
+      "type": "research",
+      "name": "Archaeological Surveyor AS-8",
+      "category": "Régészeti kutatóhajó",
+      "tagline": "Űrprobák és archeobotanikai minták teljes körű feldolgozása",
+      "description": {
+        "overview": "Az AS-8 tele van multidiszciplináris laborokkal, kimondottan régészeti feltárásokhoz és ősi technológiák dekódolásához. Építették úgy, hogy képes legyen kinyerni és stabilizálni a legérzékenyebb relicségeket.",
+        "additional": "Felszerelései lehetővé teszik a live holografikus dokumentációt és az automatikus 3D-modellezést.",
+        "applications": "Ideális a kolonizált világok ősi romjainak feltárására, valamint tudományos és kulturális expedíciók támogatására."
+      },
+      "features": [
+        "Telemetriai és kultúrális adatfelismerés",
+        "Automatikus mintapreparációs labor",
+        "Orbitalis dokumentáló drónok",
+        "AR alapú térképészet",
+        "Sugárzás és biológiai elemzés",
+        "Zárt clean-room"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.30c",
+          "acceleration": "2.1 G",
+          "range": "55 fényév",
+          "energy": "Plasma synergy + quantum condenser"
+        },
+        "lab": {
+          "laboratory": "4 holografikus + 2 steril kamra",
+          "scanner": "Multi-spectral relic detector",
+          "documentation": "AR + quantum imaging",
+          "data": "Exabyte vault"
+        },
+        "crew": {
+          "crew": "35 kutató és művész",
+          "autonomy": "4 év folyamatos küldetés",
+          "comfort": "Living dome + med bay",
+          "security": "Radiation shield + anti-corrosion shell"
+        },
+        "dimensions": {
+          "length": "200 méter",
+          "width": "70 méter",
+          "height": "45 méter",
+          "emptyMass": "5200 tonna"
+        }
+      },
+      "pricing": {
+        "price": "90.000.000 CR",
+        "availability": "Exkluzív rendelések, 6 hét szállítás"
+      },
+      "image": "/assets/images/archaeological-surveyor-as8.jpg"
+    },
+    {
+      "id": 2,
+      "type": "mining",
+      "name": "Asteroid Miner AM-5",
+      "category": "Precíziós aszteroida bányász",
+      "tagline": "Célzott kitermelés és automatikus feldolgozás egy fedélzeten",
+      "description": {
+        "overview": "Az AM-5 a bányászati flotta agya: fejlett lézeres fúrócsúcsok, in-situ finomítók és szerkezeti erősítők tartják fent a folyamatos kitermelést extrém körülmények között.",
+        "additional": "Helyspecifikus útvonaltervezéssel és adaptív hűtéssel kifejezetten ritkaföldfémekhez és kriogén kristályokhoz optimalizálták.",
+        "applications": "Kisebb aszteroidák és távoli objektumok kitermelésére, valamint gyorsan mozgó bányászcsapatok támogatására. Ideális a felszíni bázisok ellátására és a ritka ásványi anyagok azonnali feldolgozására."
+      },
+      "features": [
+        "AI-célzású fúrófejek és vibrációs stabilizálás",
+        "Orbitális adatkapcsolat + valós idejű telemetria",
+        "Moduláris bála- és szállítórendszer",
+        "Kriogén-elismerő hűtésval",
+        "Töréstérfigyelő és önjavító kompozit",
+        "Komplett logisztikai automatikus portál"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.12c",
+          "acceleration": "2.0 G",
+          "range": "28 fényév",
+          "engine": "Dual-ion + graviton lift"
+        },
+        "mining": {
+          "extraction": "500 tonna/nap",
+          "processing": "98% hatékonyságú onboard finomítás",
+          "chamber": "3000 m³ moduláris konténerek",
+          "dock": "2 konvoj + 1 automata töltőállomás"
+        },
+        "crew": {
+          "crew": "10 fő",
+          "security": "Sugaras védőpajzs + hullámfólia fedélzet",
+          "comfort": "Automatikus rezonancia csillapítás",
+          "communication": "Quantum relay + Mesh"
+        },
+        "dimensions": {
+          "length": "150 méter",
+          "width": "54 méter",
+          "height": "38 méter",
+          "emptyMass": "3100 tonna"
+        }
+      },
+      "pricing": {
+        "price": "71.000.000 CR",
+        "availability": "Elérhető, 2 hónap tesztelt kiszállítás"
+      },
+      "image": "/assets/images/asteroid-miner-am5.jpg"
+    },
+    {
+      "id": 3,
+      "type": "commercial",
+      "name": "Bulk Transport BT-15",
+      "category": "Óriási rakományhajó",
+      "tagline": "Csatatereken és kereskedelmi útvonalakon a legnagyobb tonnával",
+      "description": {
+        "overview": "A BT-15 a Bulk Transport sorozat zászlóshajója, amely 15.000 m³-nyi rakományt mozgat két nap alatt a Gateway-pályák és a külvárosi dokkok között. Erőteljes tarisznyaháló-védelme tovább növeli a biztonságot az aktív csatatereken is.",
+        "additional": "Az integrált dokkoló modulok és a mesterséges intelligencia-alapú logisztikai agy lehetővé teszi a folyamatos feltöltést, miközben minimális szállítási költséggel üzemel.",
+        "applications": "Elsősorban óriás konzorciumok használják nyersanyag- és ellátási lánc operációkhoz, amíg a moduláris platók off-planet építkezésekre és raktárhajókba telepíthetők."
+      },
+      "features": [
+        "Titan Composite páncélzat a korai szemtanúk ellen",
+        "Automaták dokkolási asszisztencia",
+        "Öngerjesztő hő- és tömegkiegyenlítő rendszerek",
+        "Moduláris terhelőkamra és áramlásvezérlés",
+        "Térségi logisztikai IA és navigációs biztonság",
+        "Adaptív energiaháló a hajtóművek között"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.10c",
+          "acceleration": "1.8 G",
+          "range": "45 fényév",
+          "engine": "Gravitációs csepp és ion tandem"
+        },
+        "cargo": {
+          "space": "15.000 m³",
+          "maxLoad": "25.000 tonna",
+          "special": "Hasadóanyag + kriogén tér",
+          "docking": "6 standard + 3 nagy"
+        },
+        "crew": {
+          "crew": "12 fő",
+          "autonomy": "120 nap (készenléti üzem)",
+          "controller": "AI Fleet BRAIN",
+          "comfort": "Runtime kabinetek + üzemanyagtisztító"
+        },
+        "dimensions": {
+          "length": "210 méter",
+          "width": "92 méter",
+          "height": "48 méter",
+          "emptyMass": "5200 tonna"
+        }
+      },
+      "pricing": {
+        "price": "97.500.000 CR",
+        "availability": "4 hónap gyártás + teszt"
+      },
+      "image": "/assets/images/bulk-transport-bt15.jpg"
+    },
+    {
+      "id": 4,
+      "type": "commercial",
+      "name": "Cargo Hauler MK-3",
+      "category": "Kereskedelmi Teherhajó",
+      "tagline": "A galaxis legmegbízhatóbb áruszállító űrhajója",
+      "description": {
+        "overview": "A Cargo Hauler MK-3 az E-CORE kereskedelmi flottájának zászlóshajója. Ez a nagy kapacitású teherhajó évtizedek tapasztalatát ötvözi a legmodernebb űrtechnológiával, hogy a leghatékonyabb áruszállítási megoldást nyújtsa bolygóközi útvonalakon.",
+        "additional": "A MK-3 modell a korábbi generációk minden tanulságát magában foglalja: nagyobb rakománytér, jobb üzemanyag-hatékonyság és továbbfejlesztett navigációs rendszerek teszik ideális választássá nagykereskedelmi útvonalakhoz.",
+        "applications": "A Cargo Hauler MK-3 ideális választás kereskedelmi flották számára, akik rendszeres, nagy mennyiségű áruszállítást végeznek bolygók és űrállomások között. Különösen hatékony hosszú távú útvonalakon, ahol a megbízhatóság és a rakománybiztonság kritikus fontosságú."
+      },
+      "features": [
+        "Nagy kapacitású rakománytér optimalizált elrendezéssel",
+        "Kvantum-hajtómű a gyors és hatékony utazáshoz",
+        "Megerősített védőpajzsok és páncélzat",
+        "Automatizált rakodási rendszer",
+        "Fejlett kommunikációs és nyomkövetési rendszerek",
+        "Környezetbarát ion-hajtóművek"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.15c (fénysebesség 15%-a)",
+          "acceleration": "2.5 G",
+          "range": "50 fényév",
+          "fuel": "Deutérium plazmacellák"
+        },
+        "cargo": {
+          "space": "5000 m³",
+          "maxLoad": "8500 tonna",
+          "type": "Moduláris, hőszabályozott",
+          "docking": "4 standard + 2 nagy méretű"
+        },
+        "crew": {
+          "crew": "8 fő",
+          "cabins": "6 + 2 tiszti",
+          "lifeSupport": "90 nap autonómia",
+          "common": "Menza, pihenő, edzőterem"
+        },
+        "dimensions": {
+          "length": "185 méter",
+          "width": "68 méter",
+          "height": "42 méter",
+          "emptyMass": "4200 tonna"
+        }
+      },
+      "pricing": {
+        "price": "85.000.000 CR",
+        "availability": "Rendelésre azonnal elérhető"
+      },
+      "image": "/assets/images/cargo-hauler-mk3.jpg"
+    },
+    {
+      "id": 5,
+      "type": "battleship",
+      "name": "Carrier Fortress CF-3",
+      "category": "Űrhordozó",
+      "tagline": "Mobil repülőgép-hordozó fedélzet a flották élére",
+      "description": {
+        "overview": "A CF-3 az E-CORE parancsnoki hajója, több mint 120 vadászgéppel és támogató drónnal rendelkezik. Nyitott repülőfedélzete és hatalmas hangára ideálissá teszi parancsnoki szerepkörre és tartós védelmi operációkra.",
+        "additional": "Modularitása és AI felügyelete biztosítja, hogy gyorsan tud reagálni a támadásokra és támogatni tudja a flottát.",
+        "applications": "Flottaparancsnokok és támadó csapatok számára, akiknek szükségük van repülőgép-hordozó infrastruktúrára gyors deploy képességgel és masszív csapásmérő potenciállal."
+      },
+      "features": [
+        "120+ vadászgép hangárkapacitás",
+        "Hyperion parancsnoki torony",
+        "Körbefutó gravitációs pajzs",
+        "Hálózati koordináció és logisztika",
+        "Moduláris csomagok a logisztikához",
+        "Energiatároló szektorok"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.18c",
+          "acceleration": "1.9 G",
+          "range": "60 fényév",
+          "engine": "Duo ion + fusion core"
+        },
+        "capacity": {
+          "hangar": "120 vadászgép + 40 drón",
+          "logistics": "5 moduláris szállító",
+          "docking": "10 multiport docking",
+          "warehouse": "9000 tonna"
+        },
+        "crew": {
+          "crew": "2500 fő",
+          "commander": "AI Fleet Brain + human admiral",
+          "operations": "Quantum link + fleet mesh",
+          "support": "Med bay + repair docks"
+        },
+        "dimensions": {
+          "length": "360 méter",
+          "width": "120 méter",
+          "height": "70 méter",
+          "emptyMass": "12,000 tonna"
+        }
+      },
+      "pricing": {
+        "price": "220.000.000 CR",
+        "availability": "Temető parancsnokság előrendelés, 7 hónap"
+      },
+      "image": "/assets/images/carrier-fortress-cf3.jpg"
+    },
+    {
+      "id": 6,
+      "type": "battleship",
+      "name": "Corvette Guardian CG-15",
+      "category": "Könnyű fregatt",
+      "tagline": "Gyors reagálás, precíz védelmi képesség",
+      "description": {
+        "overview": "A Guardian CG-15 kompakt könnyű fregatt, amely optimális választás konvojvédelemhez és felderítő missziókhoz, miközben több célpont egyidejű megsemmisítésére is alkalmas.",
+        "additional": "AI-navigáció és adaptív páncél kombinációja biztosítja, hogy az ellenséges láthatóság minimális, miközben a gyors kilövési aránya miatt átütő csapásokat lehet mérni.",
+        "applications": "Ideális könnyű fregatt csapatszállító és konvojkísérő feladatokra, különösen szűk térben vagy gyors reakciót igénylő összeütközésekben."
+      },
+      "features": [
+        "Multispektrum rakéták és lézertorony",
+        "Quick-response AI vezérlés",
+        "Adaptive shield mesh",
+        "Sensor-link a flottával",
+        "Drone hangyaflottás támogatás",
+        "Rapid maneuver boost"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.35c",
+          "acceleration": "4.0 G",
+          "range": "30 fényév",
+          "engine": "Plasma-sprint + ion stabilizátor"
+        },
+        "armament": {
+          "lasers": "2x medium burning lasers",
+          "missiles": "3x vectored rockets",
+          "drones": "6 intercept drones",
+          "attack": "EMP pulse + railgun"
+        },
+        "crew": {
+          "crew": "25 fő",
+          "ai": "Guardian OS + threat prediction",
+          "defense": "Energy shield + hull regen",
+          "communication": "Fleet mesh + quantum link"
+        },
+        "dimensions": {
+          "length": "110 méter",
+          "width": "48 méter",
+          "height": "20 méter",
+          "emptyMass": "950 tonna"
+        }
+      },
+      "pricing": {
+        "price": "68.000.000 CR",
+        "availability": "Pilotált átadás 3 hónapon belül"
+      },
+      "image": "/assets/images/corvette-guardian-cg15.jpg"
+    },
+    {
+      "id": 7,
+      "type": "mining",
+      "name": "Deep Core Excavator DCE-12",
+      "category": "Planetáris mélyfúró",
+      "tagline": "A bolygók mélyére hatoló, könnyű bázis-kiegészítő",
+      "description": {
+        "overview": "A DCE-12 egy moduláris, a bolygók kéregrétegeibe vezető fúróplatform, amely képes kinyerni ritka ásványokat, miközben elektromágneses interferencia nélkül dolgozik.",
+        "additional": "Az automata stabilizátorok és jelző sugarak biztosítják a fékmentes leszállást, továbbá a belső rendet egy intelligens hőkiegyenlítő rendszer tartja fent.",
+        "applications": "Különösen alkalmas felszíni, vulkanikus és kiszáradt tengerfenéki területek ásványi és energetikai bázisainak mélyfúrására."
+      },
+      "features": [
+        "Nano-szén alapú fúrófejek",
+        "Orbitalis relé + 3D kimutatás",
+        "Aktív hőenergia visszanyerés",
+        "Reakciós védőpajzs a sziklafallal",
+        "AI irányítású geológiai térképek",
+        "Hálózati koordináció a többi egységgel"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.08c",
+          "acceleration": "1.5 G",
+          "range": "26 fényév",
+          "engine": "Magneto-ion + gyrosztabilizátor"
+        },
+        "mining": {
+          "depth": "25 km",
+          "extract": "1200 tonna / nap",
+          "stabilizers": "4 nano-gyűrűs alátámasztás",
+          "docking": "3 szállító + 1 szerviz"
+        },
+        "crew": {
+          "crew": "14 fő",
+          "cabin": "Automatizált geológiai stúdió",
+          "security": "Állvány típusú pajzs + hullámkibocsátó",
+          "communication": "Redundáns kvantum háló"
+        },
+        "dimensions": {
+          "length": "200 méter",
+          "width": "78 méter",
+          "height": "45 méter",
+          "emptyMass": "5100 tonna"
+        }
+      },
+      "pricing": {
+        "price": "92.000.000 CR",
+        "availability": "Még 6 hét előkészítő üzemidő"
+      },
+      "image": "/assets/images/deep-core-excavator-dce.jpg"
+    },
+    {
+      "id": 8,
+      "type": "research",
+      "name": "Deep Space Observatory DSO-3",
+      "category": "Mobil űrobszervatórium",
+      "tagline": "Extrém távoli objektumok megfigyelése legmodernebb technológiával",
+      "description": {
+        "overview": "A DSO-3 egy teljesen önellátó csillagászati kutatóállomás, amely távoli galaxisok, fekete lyukak és kvazárok megfigyelésére lett tervezve. Több hullámhosszon dolgozik egyszerre.",
+        "additional": "A fedélzeten lévő holografikus laborkomponensek és szenzorok lehetővé teszik azonnali elemzést az ultraibolya, röntgen és rádió spektrumokon.",
+        "applications": "Kiemelten alkalmas csillagászati kutatásra, galaxisok közötti jelenségek monitoringjára valamint kísérleti kvantumfizikai vizsgálatokra."
+      },
+      "features": [
+        "40 méteres adaptív teleszkóp",
+        "Multi-spektrum radar + graviton detektor",
+        "Holografikus laborok",
+        "Quantum-sugárzás elleni pajzs",
+        "Deep-space relay hálózat",
+        "Mini drónszkóp drónok"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.25c",
+          "acceleration": "2.5 G",
+          "range": "500 fényév",
+          "energy": "Quantum fusion + krioszivattyúk"
+        },
+        "observatory": {
+          "telescope": "40 m adaptív + 25 m interferometrikus kiegészítő",
+          "sensors": "Röntgen, UV, infra, rádió, neutrínó",
+          "lab": "3 holografikus munkaterem",
+          "data": "Exabyte-scale quantum vault"
+        },
+        "crew": {
+          "crew": "15 kutató + 10 technikus",
+          "autonomy": "10 év önfenntartás",
+          "comfort": "Zero-g rekreációs terek",
+          "security": "Quantum shield + anti-debris armor"
+        },
+        "dimensions": {
+          "length": "230 méter",
+          "width": "92 méter",
+          "height": "60 méter",
+          "emptyMass": "7200 tonna"
+        }
+      },
+      "pricing": {
+        "price": "138.000.000 CR",
+        "availability": "Rendelés + 4 hónap telepítés"
+      },
+      "image": "/assets/images/deep-space-observatory-dso.jpg"
+    },
+    {
+      "id": 9,
+      "type": "battleship",
+      "name": "Defense Platform DP-11",
+      "category": "Moduláris védelmi platform",
+      "tagline": "Telepíthető védelem űrállomásoknak és bolygók körül",
+      "description": {
+        "overview": "A DP-11 moduláris platform, amely gyors telepítéssel tűz alá vehető konvojok vagy űrállomások védelmére. Általában railgunok, rakétasilók és védekező energiamező kombinációjával szereljük fel.",
+        "additional": "A telepített egység 20 éves üzemidőt képes biztosítani, miközben önjavító nanofóliája és AI-monitorozó rendszere kordában tartja a fenntarthatóságot.",
+        "applications": "Kiemelten hasznos űrállomások, logisztikai csomópontok és terraformált bolygók védelméhez, ahol a fenntartás és szinte teljes autonóm üzem fontos."
+      },
+      "features": [
+        "Moduláris fegyverzet és drónkíséret",
+        "AI alapú precíziós célzás",
+        "Védekező mező és EMI pajzs",
+        "Több platform összekapcsolás",
+        "Self-repair rendszer",
+        "Automatikus fenyegetés-elemzés"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "Álló telepítés (relokáció: 0.12c)",
+          "acceleration": "3.0 G (kiszolgáló hajóval)",
+          "range": "50,000 km + orbitális pálya",
+          "energy": "Dual fusion + solar array"
+        },
+        "capabilities": {
+          "armament": "Railgunak, rakétasilók, EMP pulzus",
+          "coOp": "3 moduláris platform összekapcsolása",
+          "drones": "15 Sentinel + 6 repair",
+          "docking": "4 multiport & 2 logisztikai"
+        },
+        "crew": {
+          "crew": "45 fő üzemeltető + 2 AI",
+          "ai": "Defense Brain + predictive warfare",
+          "security": "Adaptive shield hive",
+          "maintenance": "Self repair + nano coat"
+        },
+        "dimensions": {
+          "length": "210 méter",
+          "width": "120 méter",
+          "height": "60 méter",
+          "emptyMass": "6400 tonna"
+        }
+      },
+      "pricing": {
+        "price": "132.000.000 CR",
+        "availability": "Telepítés 4 hónap alatt"
+      },
+      "image": "/assets/images/defense-platform-dp11.jpg"
+    },
+    {
+      "id": 10,
+      "type": "battleship",
+      "name": "Destroyer Titan DT-9",
+      "category": "Nehéz romboló",
+      "tagline": "Tűzerő és megállíthatatlan páncélzat a frontvonalban",
+      "description": {
+        "overview": "A DT-9 a legnagyobb rombolónk: nagy hatótávolságú torpedók, railgunok és kiterjesztett pajzsok alkotják. Képes egy egész flottát fedezni és elnyelni a legintenzívebb tűzvihart.",
+        "additional": "A pilótafülke szigorúan védett, a belső tér pedig a hosszú távú műveletekre lett optimalizálva.",
+        "applications": "Flották frontlini megtartásához, városok védelméhez és hatalmas gyengítő csapásokhoz; a DT-9 különösen hatékony csillagháborús összecsapásokban."
+      },
+      "features": [
+        "Kettős railgun + torpedócső sor",
+        "Kiterjesztett gravitációs pajzs",
+        "AI csapat-koordinátor",
+        "Extra duplahypercélzás",
+        "Páncélzat plusz self-heal",
+        "Multi-link csatatér kommunikáció"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.25c",
+          "acceleration": "3.2 G",
+          "range": "45 fényév",
+          "engine": "Dual fusion + rail stabilizer"
+        },
+        "armament": {
+          "railgun": "2x heavy rail",
+          "torpedoes": "4x gravity torpedo launcher",
+          "laser": "3x precision beam",
+          "missionSupport": "Drone repair & recon"
+        },
+        "crew": {
+          "crew": "180 fő",
+          "ai": "Titan Brain squad control",
+          "armor": "Graphene + kinetic dampening",
+          "communication": "Fleet mesh + quantum radio"
+        },
+        "dimensions": {
+          "length": "240 méter",
+          "width": "95 méter",
+          "height": "60 méter",
+          "emptyMass": "7600 tonna"
+        }
+      },
+      "pricing": {
+        "price": "180.000.000 CR",
+        "availability": "Parancsnoki megrendelés, 5 hónap szállítás"
+      },
+      "image": "/assets/images/destroyer-titan-dt9.jpg"
+    },
+    {
+      "id": 11,
+      "type": "research",
+      "name": "Explorer Class EC-10",
+      "category": "Hosszú távú kutatóhajó",
+      "tagline": "Önálló labor, térképészet és életfenntartás egy fedélzeten",
+      "description": {
+        "overview": "Az EC-10 az E-CORE tudományos flottájának zászlóshajója: teljes laborok, spektrális megfigyelések, és élő közvetítés a bolygók közti közösségek felé. A hajó képes 5 éves önellátásra.",
+        "additional": "Hatalmas megfigyelőrendszere és valós idejű elemzője lehetővé teszi, hogy távoli jelenségek felbukkanásakor azonnal reagáljon és új küldetési profilt alakítson ki.",
+        "applications": "Főként mélyűri felfedező küldetésekhez, aszteroida-vadászathoz és idegen világok vizsgálatához. Ideális hosszú távú expedíciókhoz, ahol a legénység 70%-a tudományos személyzet."
+      },
+      "features": [
+        "Gigantikus megfigyelő kupola",
+        "Teljesen felszerelt multi-disciplináris labor",
+        "AI-alapú adatelemzés és szimuláció",
+        "Autonomous orbitális relay",
+        "Quantum alapú energiaellátás",
+        "Adaptive térképészeti engine"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.40c",
+          "acceleration": "2.9 G",
+          "range": "100 fényév",
+          "energy": "Quantum fusion"
+        },
+        "lab": {
+          "telescope": "40 méteres adaptív",
+          "laboratory": "4 multidiszciplináris szekció",
+          "data": "Petabyte-scale quantum vault",
+          "network": "Global relay + orbital"
+        },
+        "crew": {
+          "crew": "45 tudós + 15 támogatás",
+          "autonomy": "5 év életfenntartás",
+          "comfort": "Biotér + regeneráló körök",
+          "security": "Quantum shield + hullámkritikus"
+        },
+        "dimensions": {
+          "length": "210 méter",
+          "width": "90 méter",
+          "height": "60 méter",
+          "emptyMass": "6500 tonna"
+        }
+      },
+      "pricing": {
+        "price": "125.000.000 CR",
+        "availability": "Korlátozott mennyiség, 3 hónap szállítás"
+      },
+      "image": "/assets/images/explorer-class-ec10.jpg"
+    },
+    {
+      "id": 12,
+      "type": "commercial",
+      "name": "Express Shuttle X-7",
+      "category": "Gyors Alkalmi Shuttle",
+      "tagline": "Azonnali szállítási válaszidő, prémium utazási élmény",
+      "description": {
+        "overview": "Az X-7 alacsony tömegű, expressz shuttle, amely garantálja a fontos csomagok és VIP utasok gyors átszállítását. Hatékony gyorstöltő rendszerrel és adaptív hangolással képes percek alatt készen állni a következő járatra.",
+        "additional": "A moduláris kabin lehetővé teszi a cargo és személyzet kombinált konfigurációját, így akár 12 utas és 2,5 tonna kísérő szállítmány is együtt utazhat.",
+        "applications": "Legfőbb felhasználói a gyorsreakciós bázisok, VIP szállítmányozó flották és diplomáciai küldetések. Az X-7 alkalmas arra, hogy gyorsan átszálljon űrállomások és terraformált túlélőbázisok között, miközben felső kategóriás utazási élményt biztosít."
+      },
+      "features": [
+        "Kvantum-pulse hajtómű rövid távú sprinthez",
+        "AI-asszisztált útvonaltervezés",
+        "Luxury kabin okosvilágítással és adaptív ülésekkel",
+        "Nagy kapacitású gyors töltőport",
+        "Energia pajzs körbekerítéssel",
+        "Élő telemetria és utasértesítő modul"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.35c",
+          "acceleration": "5.2 G",
+          "range": "30 fényév",
+          "engine": "Kvantum-pulse + ion-stabilizátor"
+        },
+        "capacity": {
+          "passengers": "12 fő",
+          "cargo": "2,5 tonna",
+          "cabin": "Moduláris üléssor + cargo szekció",
+          "docking": "3 standard csatlakozó"
+        },
+        "crew": {
+          "crew": "3 fő",
+          "autonomy": "96 óra teljes AI üzem",
+          "cabin": "Panoráma ablak + adaptív hangrendszer",
+          "connection": "Quantum-mesh, 4G-s print"
+        },
+        "dimensions": {
+          "length": "72 méter",
+          "width": "28 méter",
+          "height": "20 méter",
+          "emptyMass": "1800 tonna"
+        }
+      },
+      "pricing": {
+        "price": "62.000.000 CR",
+        "availability": "Ütemezett gyártási kapacitás, 3 hónap szállítás"
+      },
+      "image": "/assets/images/express-shuttle-x7.jpg"
+    },
+    {
+      "id": 13,
+      "type": "mining",
+      "name": "Gas Giant Extractor GGE-4",
+      "category": "Atmoszférikus gázbányász",
+      "tagline": "Felszívja a gázóriások légkörét, tárolja és tölt ki",
+      "description": {
+        "overview": "A GGE-4 egy mélylégköri extractor, amely stabilan tartja pozícióját a gázóriások felett, hogy sűrített nemesgázokat gyűjtsön össze. Adaptív térhálója meggátolja a szelek és viharágyúk hatását.",
+        "additional": "Több fázisú separator-rendszere automatikusan választja szét a hélium-3-at, hidrogént és egyéb komponenseket.",
+        "applications": "Gázóriások, fellőtt szondák és üzemanyag előállító létesítmények számára fejlesztett masszív szivattyúhajó."
+      },
+      "features": [
+        "Stabilizált lebegő rendszerek",
+        "Bolygóközi relay és telemetria",
+        "Hélium-3 és puffer tárolók",
+        "Rétegzett biztonsági láncok a nyomás ellen",
+        "Élő hatékonyság monitor",
+        "Gázvisszanyerő háló"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.14c",
+          "acceleration": "1.9 G",
+          "range": "50 fényév",
+          "stabilization": "Plazma-lift + gravitációs rács"
+        },
+        "capacity": {
+          "gasExtraction": "2000 tonna/nap",
+          "storage": "5000 m³ tömörített gáz",
+          "chambers": "3 fázisú szétválasztás",
+          "docking": "2 tank + 1 rendszer karbantartás"
+        },
+        "crew": {
+          "crew": "25 fő",
+          "automation": "AI stabilitás + meteorikus védelem",
+          "communication": "Quantum mesh + stabil relé",
+          "security": "Anti-corrosion shield"
+        },
+        "dimensions": {
+          "length": "205 méter",
+          "width": "82 méter",
+          "height": "45 méter",
+          "emptyMass": "6000 tonna"
+        }
+      },
+      "pricing": {
+        "price": "110.000.000 CR",
+        "availability": "Előrendelés, 5 hónap szállítás"
+      },
+      "image": "/assets/images/gas-giant-extractor-gge.jpg"
+    },
+    {
+      "id": 14,
+      "type": "mining",
+      "name": "Ice Harvester IH-7",
+      "category": "Vízjég kitermelő",
+      "tagline": "Űrbéli víz- és oxigénforrás azonnali gyűjtése, szállítása",
+      "description": {
+        "overview": "Az IH-7 kimondottan vízjég kitermelésére készült üstökösökről és jégbolygókról. Megbízható, zárt hűtött raktárakkal és cseppmentes csőhálózattal rendelkezik.",
+        "additional": "A hajó kétoldalt kinyitható vízbányász-fejekkel és integrált jégfeldolgozó berendezéssel érkezik a leghidegebb térségekbe.",
+        "applications": "Elsősorban víz és oxigén utánpótlás biztosítására, valamint kriogén kitermelés támogatására fél-automata kutató bázisok számára."
+      },
+      "features": [
+        "Ultra-cold stabilizált jégkamrák",
+        "Víznyerő fokozatok + ion tisztítás",
+        "Kriogén hálózati kapcsolatok",
+        "Energiatakarékos halogen fűtés",
+        "Többkamrás szállítórendszer",
+        "Távvezérelt monitoring és automata újratöltés"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.20c",
+          "acceleration": "2.0 G",
+          "range": "35 fényév",
+          "energy": "Plazma + térfűtés"
+        },
+        "extraction": {
+          "waterExtraction": "600 tonna/nap",
+          "coolingCapacity": "2800 m³",
+          "system": "Kriogén szűrők + UV sterilizálás",
+          "docking": "2 kriogén + 1 víztranszfer"
+        },
+        "crew": {
+          "crew": "10 fő",
+          "cabin": "Cirkulált atmoszféra + nyomáskompenzáció",
+          "communication": "Quantum cryo relay",
+          "security": "Anti-icing pajzs + tested biztonság"
+        },
+        "dimensions": {
+          "length": "135 méter",
+          "width": "44 méter",
+          "height": "34 méter",
+          "emptyMass": "3000 tonna"
+        }
+      },
+      "pricing": {
+        "price": "64.500.000 CR",
+        "availability": "Üzembe helyezés 5 hét alatt"
+      },
+      "image": "/assets/images/ice-harvester-ih7.jpg"
+    },
+    {
+      "id": 15,
+      "type": "battleship",
+      "name": "Interceptor Hawk IH-22",
+      "category": "Gyors vadászgép",
+      "tagline": "Reakciókész, precíz és könnyű ugró vadász",
+      "description": {
+        "overview": "Az IH-22 az első sorban dolgozik: villámgyors sebesség, adaptív páncél és kifinomult fegyverrendszer garantálja, hogy a csata első hullámában is uralja az étert.",
+        "additional": "Lézeres manőverezők és null-gravitációs hajtóművek teszik képessé, hogy a veszélyes terepek között is stabilan pozícionálva végezzen precíziós csapásokat.",
+        "applications": "Hatékony konvojvédelmi, csapásmérő és védelmi bevetéseken, ahol gyors reagálásra van szükség, különösen űrbeli kijáratok és dokkok körül."
+      },
+      "features": [
+        "Plazma impulzus hajtómű + stabilizáló szárnyak",
+        "Dual-lézer + rakéta kombináció",
+        "AI-fejlett célkövetés",
+        "Energia pajzs & mezőalapú szűrés",
+        "Extra gyors fel- és leszállítás",
+        "Támogató drón interfész"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.60c",
+          "acceleration": "6.5 G",
+          "range": "42 fényév",
+          "engine": "Plazma-boost + nano stabilizátor"
+        },
+        "armament": {
+          "lasers": "2x Közepes intenzitású plazmalézer",
+          "missiles": "4x homing rakéta",
+          "aggressivePack": "EMP hullám + diszruptor",
+          "support": "Bárhol deploy drónok"
+        },
+        "crew": {
+          "crew": "1 pilot + AI",
+          "sensor": "Precision radar & thermal",
+          "denyReplay": "Quantum stealth",
+          "security": "Adaptive shield + hull regen"
+        },
+        "dimensions": {
+          "length": "36 méter",
+          "width": "12 méter",
+          "height": "7 méter",
+          "emptyMass": "220 tonna"
+        }
+      },
+      "pricing": {
+        "price": "49.000.000 CR",
+        "availability": "Gyártás 4 hét, azonnali bevetés"
+      },
+      "image": "/assets/images/interceptor-hawk-ih22.jpg"
+    },
+    {
+      "id": 16,
+      "type": "commercial",
+      "name": "Modular Freighter MF-8",
+      "category": "Moduláris rakományhajó",
+      "tagline": "Testreszabható konfiguráció, akár 6 külön üzemmódban",
+      "description": {
+        "overview": "Az MF-8 egy plug-and-play rakományhajó, amely moduláris belső felépítésével bármilyen árutípushoz igazítható: a konténerektől a folyékony kriogén tartályokon át az emberi szállításig.",
+        "additional": "A belső szerkezet átalakítható 20 perc alatt, így bármilyen logisztikai kéréshez részletesen hangolható.",
+        "applications": "Ideális bányászati támogatásra, állomásközi szállításra és gyorsan változó rakománykezelési feladatokra. A moduláris felépítés miatt egy nap alatt újra konfigurálható."
+      },
+      "features": [
+        "Moduláris belső építmény gyors átalakítással",
+        "Hybrid ion + plasma booster hajtómű",
+        "Konténervezérlés AI-val",
+        "Bővíthető felszerelés (remotely upgrade)",
+        "360° térfigyelő + hullámblokkoló",
+        "Hő- és nyomáskompenzált tárolók"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.18c",
+          "acceleration": "2.2 G",
+          "range": "38 fényév",
+          "engine": "Hybrid ion - plasma modul"
+        },
+        "cargo": {
+          "space": "3500 m³",
+          "maxLoad": "4200 tonna",
+          "slots": "6 cserélhető kamra",
+          "docking": "4 standard + 1 gyors"
+        },
+        "crew": {
+          "crew": "7 fő",
+          "autonomy": "80 nap + autopilot",
+          "ai": "Moduláris logisztikai asszisztens",
+          "security": "Energia páncél + hullámblokk"
+        },
+        "dimensions": {
+          "length": "160 méter",
+          "width": "48 méter",
+          "height": "30 méter",
+          "emptyMass": "2900 tonna"
+        }
+      },
+      "pricing": {
+        "price": "61.000.000 CR",
+        "availability": "2 hónapos átállás után azonnal szállítható"
+      },
+      "image": "/assets/images/modular-freighter-mf8.jpg"
+    },
+    {
+      "id": 17,
+      "type": "mining",
+      "name": "Ore Processor OP-9",
+      "category": "Mobil ércdolgozó állomás",
+      "tagline": "Finomításra optimalizált, teljesen önálló dolgozó",
+      "description": {
+        "overview": "Az OP-9 egy mobil ércfeldolgozó egység, amely azonnal üzembe áll újonnan feltárt kitermeléseknél. Tartalmaz hiperszűrőket, nano-mosókat és öntisztító kamrákat, így csökkenti a visszaszállítandó nyersanyag mennyiségét.",
+        "additional": "A moduláris elrendezés lehetővé teszi a kombinált nyersanyagfeldolgozást, beleértve a kriogén, fémes és ritkaföldfém komponenseket.",
+        "applications": "Ideális a bázisközeli érckitermelés kiegészítésére, mivel azonnal szétválasztja a friss kitermelést, és kiemeli a drágább komponenseket, mielőtt továbbítaná őket a flottáknak."
+      },
+      "features": [
+        "Valós idejű anyagösszetétel elemzés",
+        "Teljes folyamat visszanyerő hőciklusok",
+        "Orbitális vezérlő interfész",
+        "Tűz- és robbanásbiztos bevonat",
+        "Nano-illetmény diagnosztika",
+        "Okos pakk automatikus rakodás"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.15c",
+          "acceleration": "2.1 G",
+          "range": "32 fényév",
+          "endurance": "24/7 folyamatos üzem"
+        },
+        "processing": {
+          "capacity": "800 tonna/nap",
+          "refinement": "95-99% tisztaság",
+          "output": "3 áruszállító egység",
+          "dock": "2 automata konténer + 1 fénykivető"
+        },
+        "crew": {
+          "crew": "4 fő + remote ops",
+          "data": "Quantum telemetry + geo AI",
+          "security": "Mag-pajzs + anti-spike",
+          "energy": "Tripla kerékpántos napelem + ion"
+        },
+        "dimensions": {
+          "length": "140 méter",
+          "width": "58 méter",
+          "height": "40 méter",
+          "emptyMass": "2700 tonna"
+        }
+      },
+      "pricing": {
+        "price": "68.000.000 CR",
+        "availability": "Rendelés + 5 hét teszt"
+      },
+      "image": "/assets/images/ore-processor-op9.jpg"
+    },
+    {
+      "id": 18,
+      "type": "research",
+      "name": "Planetary Survey PS-6",
+      "category": "Bolygói szkenner",
+      "tagline": "Atmoszferikus és felszíni felmérés egyetlen, gyorsan telepíthető platformon",
+      "description": {
+        "overview": "Az PS-6 integrált radarokkal, spektrométerekkel és légköri szenzorokkal vizsgálja a bolygókat, beleértve a mély légkört, a magnetoszférát és felszíni anomáliákat.",
+        "additional": "Pilótái a fedélzeti AI segítségével gyorstérképezést és adatküldést végeznek, így ideális a feltöltött támogató flották számára.",
+        "applications": "Felderítő expedíciók, terraformálás előkészítő munka, topográfiai hitelesítés, rejtett ásványi zónák feltérképezése."
+      },
+      "features": [
+        "Multi-sávos atmoszférikus radar",
+        "Orbitalis relé + adaptív antenna",
+        "Teljes spektrális szkenner",
+        "Valós idejű térképészeti engine",
+        "Gyors telepítésű drónrendszer",
+        "AI vezérelt küldetésoptimalizálás"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.35c",
+          "acceleration": "3.5 G",
+          "range": "80 fényév",
+          "endurance": "4 év teljes távfelügyelet"
+        },
+        "mapping": {
+          "resolution": "5 cm + atmoszferikus profil",
+          "atmosphere": "800 km",
+          "scanners": "Hyper-UV + infra + radar",
+          "density": "Negyed orbitális mintavétel"
+        },
+        "crew": {
+          "crew": "22 (14 tudós + 8 támogatás)",
+          "data": "Quantum vault + streaming",
+          "communication": "Orbital relay + planetary mesh",
+          "security": "Adaptive shield + ion drift"
+        },
+        "dimensions": {
+          "length": "160 méter",
+          "width": "62 méter",
+          "height": "40 méter",
+          "emptyMass": "4300 tonna"
+        }
+      },
+      "pricing": {
+        "price": "78.000.000 CR",
+        "availability": "Elérhető, 6 hét átadás"
+      },
+      "image": "/assets/images/planetary-survey-ps6.jpg"
+    },
+    {
+      "id": 19,
+      "type": "mining",
+      "name": "Prospector Drone PD-3",
+      "category": "Autonóm felderítő drón",
+      "tagline": "Felhők és mélyedések feltérképezésére tervezett intelligens egység",
+      "description": {
+        "overview": "A PD-3 drón kis méretének és adaptív szenzorrendszerének köszönhetően gyorsan térképezi fel a bányászati mezőket, és saját algoritmusaival jelenti a legértékesebb zónákat.",
+        "additional": "Fedélzetén spektrométerek, radarok és lézerek dolgoznak együtt, így akár 100 km-re is azonnal elemzi a talaj összetételét és az anyagbányászati esélyeket.",
+        "applications": "Kiemelten kisebb aszteroidakéreg, holdi kráterek és több száz kilométeres felszíni régiók feltérképezésére, ahol gyorsan értékes adatokra van szükség."
+      },
+      "features": [
+        "Multi-szenzoros térképészeti háló",
+        "Autonóm döntéshozatal és javasolt kitermelési útvonal",
+        "Micro-thruster stabilizátorok",
+        "Valós idejű hálózati kommunikáció",
+        "Környezeti adaptív hűtés",
+        "Vészjelző + blokkolt terület figyelés"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.08c",
+          "acceleration": "1.0 G",
+          "range": "15 fényév (relay támogatással)",
+          "endurance": "72 óra folyamatos repülés"
+        },
+        "sensors": {
+          "scanning": "100 km-es rádión túli spektrális térkép",
+          "detection": "Topográfiai és mintaelemzés",
+          "communication": "Quantum mesh + GPS-szerű csillagerő",
+          "endurance": "75 perc hover + 25 perc töltés"
+        },
+        "system": {
+          "crew": "Nincs – távvezérelt",
+          "emergency": "Autonóm menekülés és restart",
+          "sensor": "Precision LIDAR + thermal",
+          "management": "AI-axial flight control"
+        },
+        "dimensions": {
+          "length": "12 méter",
+          "width": "4 méter",
+          "height": "3 méter",
+          "emptyMass": "180 tonna"
+        }
+      },
+      "pricing": {
+        "price": "39.000.000 CR",
+        "availability": "Gyors szállítás, 4 hét szárítás"
+      },
+      "image": "/assets/images/prospector-drone-pd3.jpg"
+    },
+    {
+      "id": 20,
+      "type": "research",
+      "name": "Quantum Research Vessel QRV-2",
+      "category": "Kvantumkutató hajó",
+      "tagline": "Extrém körülmények között is stabil tengelyen tartva a tudományos munkát",
+      "description": {
+        "overview": "A QRV-2 kvantumszámítási és gravitonvizsgálati feladatokra optimalizált vitorlás, amely a legutolsó kutatási küldetéseket képes támogatni bármely asztronómiai környezetben.",
+        "additional": "Három teljesen izolált labor, adaptív szkenner és gravitációs felfüggesztés ad kivételes flexibilitást a modellezéshez.",
+        "applications": "Kiemelten alkalmas kvantumfizikai kísérletekhez, gravitációs hullámmonitorokhoz és kozmikus jelzések valós idejű vizsgálatához."
+      },
+      "features": [
+        "Kvantum-számítóbázis + gravitációs manipulátor",
+        "Orbitális és deep-space kommunikáció",
+        "Laborhálók és löketvektor analízis",
+        "Önjavító energia disztribúció",
+        "Live-stream tudományos csatorna",
+        "AI-szabályozott küldetésirányítás"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.35c",
+          "acceleration": "2.2 G",
+          "range": "70 fényév",
+          "energy": "Quantum fusion cella + térszimmetria"
+        },
+        "research": {
+          "lab": "3 holografikus és 2 kvantum labor",
+          "sensor": "Multi-spectrum sensor lattice",
+          "data": "Quantum vault + hyperstream",
+          "relay": "Deep-space & orbital mesh"
+        },
+        "crew": {
+          "crew": "25 tudós",
+          "autonomy": "7 év autonom",
+          "comfort": "Zero-g wellnes & holo-tér",
+          "security": "Quantum shield & magneto-relay"
+        },
+        "dimensions": {
+          "length": "190 méter",
+          "width": "76 méter",
+          "height": "44 méter",
+          "emptyMass": "4800 tonna"
+        }
+      },
+      "pricing": {
+        "price": "99.000.000 CR",
+        "availability": "Elérhető, 6 hét telepítés"
+      },
+      "image": "/assets/images/quantum-research-vessel-qrv.jpg"
+    },
+    {
+      "id": 21,
+      "type": "commercial",
+      "name": "Refrigerated Carrier RC-4",
+      "category": "Hűtött Lánc Specialistája",
+      "tagline": "Élelmiszer, gyógyszer és érzékeny rakomány biztonságos útvonalon",
+      "description": {
+        "overview": "Az RC-4 a bolygók közötti hűtött logisztika élharcosa: többszörös hőszabályozott kamrák, lézeres sterilizáció és intelligens klímavezérlés tartja a rakományt mindig optimális állapotban.",
+        "additional": "A hajó moduljai 4 különböző hőzónára vannak hangolva, így egyszerre lehet szállítani gyógyszereket, élelmiszert és kriogén technológiát.",
+        "applications": "Olyan flották használják, akiknek a bioszállítmány nem tolerál egyetlen hőmérséklet-ingadozást sem – gyógyszeripari lánc, biotechnológiai kutatások, valamint stratégiai válsághelyzetek."
+      },
+      "features": [
+        "Multizónás hűtőrendszer ±0.1°C pontossággal",
+        "Quantum-szabályozott léghatár a kritikus levegőhöz",
+        "Kétirányú visszanyerő energia és redundáns hűtőáramkör",
+        "Biztonsági lánc követés + AI-értesítés",
+        "Megerősített kriogén tároló",
+        "Élő állapot- és biomonitoring"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.20c",
+          "acceleration": "2.1 G",
+          "range": "35 fényév",
+          "engine": "Ion + termális stabilizátor kettős"
+        },
+        "cargo": {
+          "cooling": "-250°C - +5°C",
+          "capacity": "2500 m³",
+          "chambers": "4 zóna, egyenként 600 m³",
+          "docking": "2 kriogén töltőcsatlakozó"
+        },
+        "crew": {
+          "crew": "6 fő",
+          "monitoring": "AI telemetria + biotext",
+          "system": "BioSafe OS + redundáns hűtőrendszer",
+          "security": "Belső release valve + hullámocskás fedezék"
+        },
+        "dimensions": {
+          "length": "170 méter",
+          "width": "60 méter",
+          "height": "35 méter",
+          "emptyMass": "3100 tonna"
+        }
+      },
+      "pricing": {
+        "price": "58.000.000 CR",
+        "availability": "Kezdeti szállítás 6 héten belül"
+      },
+      "image": "/assets/images/refrigerated-carrier-rc4.jpg"
+    },
+    {
+      "id": 22,
+      "type": "commercial",
+      "name": "Station Liner SL-9",
+      "category": "Luxus Utasszállító",
+      "tagline": "100%-os kényelem és független megfigyelés a csillagok között",
+      "description": {
+        "overview": "Az SL-9 a Station Liner sorozat legújabb tagja: 200 utas, prémium kabinok, és továbbfejlesztett csillagközi stabilizátorok. A fedélzeten élőzenekar zónák, VR-élmények és panoráma kilátó biztosítanak luxus hangulatot.",
+        "additional": "A hajó designja a mobil űrállomások funkcionalitását ötvözi a pihentető környezettel, automata büfékkel és moduláris élményterekkel.",
+        "applications": "Díjnyertes interplanetáris pályákra, különleges gyári rendezvényekre és diplomáciai szállításokra tervezve. Az SL-9 különösen jól szolgál családoknak, kutatócsoportoknak és legfelsőbb vezetőknek."
+      },
+      "features": [
+        "Panoráma kilátó és adaptív üvegfelület",
+        "AI concierge és valós idejű VIP szolgáltatások",
+        "Zero-g wellnes zónák és regeneráló kabinok",
+        "Teljes orbitális navigációs redundancia",
+        "Nyitott hangtervezés utazási hangulat modulokkal",
+        "Live-stream csillagászati megfigyelés küldetésekhez"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.25c",
+          "acceleration": "3.1 G",
+          "range": "40 fényév",
+          "engine": "Hybrid ion + plasma boost"
+        },
+        "capacity": {
+          "passengers": "200 fő",
+          "luxuryCabins": "60 moduláris lakosztály",
+          "conference": "3 nagy és 5 közepes",
+          "docking": "8 multifunkciós"
+        },
+        "crew": {
+          "crew": "25 fő",
+          "refillModule": "Hibrid celularis + nanobot",
+          "security": "Adaptive shield mesh + stealth cam",
+          "comfort": "Zero-g spa, VR naposzlop"
+        },
+        "dimensions": {
+          "length": "220 méter",
+          "width": "85 méter",
+          "height": "55 méter",
+          "emptyMass": "6400 tonna"
+        }
+      },
+      "pricing": {
+        "price": "114.000.000 CR",
+        "availability": "Exkluzív rendelések 4 hónap alatt"
+      },
+      "image": "/assets/images/station-liner-sl9.jpg"
+    },
+    {
+      "id": 23,
+      "type": "battleship",
+      "name": "Stealth Phantom SP-7",
+      "category": "Lopakodó felderítő",
+      "tagline": "Nanobevonatos test, teljes csendesség és késleltetett felderítés",
+      "description": {
+        "overview": "A Phantom SP-7 álcázó technológiája miatt remek választás felderítő vagy diverziós bevetésekre. Elektromos és színezett felületekkel minimalizálja a radar és infravörös jeleket.",
+        "additional": "Karcsú testét könnyen konfigurálható fegyverplatformmal és drónkísérettel egészítettük ki, hogy teljes legyen a kellemetlen felderítő egység.",
+        "applications": "Titkos felderítő küldetésekre, radar blokkolásra és határbiztosításra használható, különösen ahol villámgyors és láthatatlan beavatkozás szükséges."
+      },
+      "features": [
+        "Nanobevonat + aktív álcázás",
+        "Quantum interferens szenzorok",
+        "Moduláris fegyverzet (laser+misz)",
+        "Drone-szorongató háló",
+        "Sebesség és csendes hajtómű",
+        "Csatolt valós idejű kommunikáció"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.45c",
+          "acceleration": "4.8 G",
+          "range": "28 fényév",
+          "engine": "Silent plasma + graviton stabil"
+        },
+        "armament": {
+          "lasers": "2x micro stealth beam",
+          "missiles": "2x homing micro",
+          "drones": "2 recon micro-drones",
+          "stealth": "EMP és invisibility cloak"
+        },
+        "crew": {
+          "crew": "1 pilot + AI",
+          "ai": "Ghost OS + stealth cam",
+          "communication": "Quantum hush beam",
+          "defense": "Adaptive shadow shield"
+        },
+        "dimensions": {
+          "length": "68 méter",
+          "width": "22 méter",
+          "height": "16 méter",
+          "emptyMass": "560 tonna"
+        }
+      },
+      "pricing": {
+        "price": "78.000.000 CR",
+        "availability": "Speciális rendelés, 45 nap"
+      },
+      "image": "/assets/images/stealth-phantom-sp7.jpg"
+    },
+    {
+      "id": 24,
+      "type": "research",
+      "name": "Xenobiology Lab XL-4",
+      "category": "Idegen biológiai labor",
+      "tagline": "Karanténnal védett kutatóállomás idegen életformák vizsgálatához",
+      "description": {
+        "overview": "Az XL-4 egy teljesen izolált xenobiológiai labor, amely lehetővé teszi élő idegen minták vizsgálatát és reprodukcióját. Hő, nyomás és biológiai környezet precíz kontrollja mellett a fedélzet többszörös karanténkamrákkal rendelkezik.",
+        "additional": "AI által vezérelt fertőtlenítő rendszerek és holografikus dokumentáció biztosítják a tudományos megbízhatóságot.",
+        "applications": "Kiemelten alkalmas idegen életjelek, biominták és új életformák biztonságos feldolgozására, beleértve tudományos és diplomáciai küldetéseket egyaránt."
+      },
+      "features": [
+        "Többrétegű steril karantén",
+        "Holografikus analizátorok",
+        "Aktív hő- és atmoszféra szabályozás",
+        "Biorezonancia monitor",
+        "Orbitális adatkapcsolat és quantum segéd",
+        "Víruskimutató és automata izoláció"
+      ],
+      "specs": {
+        "performance": {
+          "maxSpeed": "0.22c",
+          "acceleration": "2.1 G",
+          "range": "48 fényév",
+          "energy": "Bio-fusion + solar array"
+        },
+        "lab": {
+          "laboratory": "6 steril + 3 karantén",
+          "samples": "Quantum stabilizált tároló",
+          "analysis": "AI + multi-spectrum diag",
+          "communication": "Quantum mesh + orbitális uplink"
+        },
+        "crew": {
+          "crew": "32 kutató, 10 technikus",
+          "defense": "Double shield + bio-trigger",
+          "security": "Auto-quarantine + intangible field",
+          "autonomy": "3 év karbantartás"
+        },
+        "dimensions": {
+          "length": "190 méter",
+          "width": "76 méter",
+          "height": "48 méter",
+          "emptyMass": "5200 tonna"
+        }
+      },
+      "pricing": {
+        "price": "96.000.000 CR",
+        "availability": "Korlátozott sorozat, 6 hét szállítás"
+      },
+      "image": "/assets/images/xenobiology-lab-xl4.jpg"
+    }
+  ],
+  "illustrations": {
+    "about-factory": "https://res.cloudinary.com/djemtfagn/image/upload/v1776175074/about-factory_essdws.jpg",
+    "about-research": "https://res.cloudinary.com/djemtfagn/image/upload/v1776175074/about-research_qjwvdq.jpg",
+    "category-mining": "https://res.cloudinary.com/djemtfagn/image/upload/v1776175081/category-mining_lgz6gr.jpg",
+    "competitive-income": "https://res.cloudinary.com/djemtfagn/image/upload/v1776175083/competitive-income_mggj6p.jpg",
+    "growth-opportunities": "https://res.cloudinary.com/djemtfagn/image/upload/v1776175092/growth-opportunities_wai0b7.jpg",
+    "hero-spacecraft": "https://res.cloudinary.com/djemtfagn/image/upload/v1776175092/hero-spacecraft_kjfsxw.jpg",
+    "hero-spacecraft_old": "https://res.cloudinary.com/djemtfagn/image/upload/v1776175093/hero-spacecraft_old_ljufgt.jpg",
+    "icon-innovation": "https://res.cloudinary.com/djemtfagn/image/upload/v1776175096/icon-innovation_ydychk.jpg",
+    "innovative-environment-old": "https://res.cloudinary.com/djemtfagn/image/upload/v1776175098/innovative-environment-old_fws0fk.jpg",
+    "innovative-environment": "https://res.cloudinary.com/djemtfagn/image/upload/v1776175097/innovative-environment_ndijll.jpg",
+    "factory-video": "https://res.cloudinary.com/djemtfagn/video/upload/v1776175100/factory-video_ebl7s8.mp4"
+  }
+}

@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Core Űrjárművek - Bányászati járművek</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+    <style>
+      .product-item {
+        position: relative;
+      }
+
+      .product-image-container {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .product-item img {
+        display: block;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+      }
+
+      .smoke-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ========================================
+         NAVIGÁCIÓS SÁV
+         ======================================== -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Logó -->
+        <div class="logo">
+          <a href="../../index.html">
+            <img src="../../assets/logo.png" alt="E-CORE logo" />
+            E-CORE
+          </a>
+        </div>
+
+        <!-- Hamburger menü gomb (csak mobillon látszik) -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Főmenü linkek -->
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../commercial/index.html">Kereskedelem</a></li>
+          <li><a href="../mining/index.html" class="active">Bányászat</a></li>
+          <li><a href="../research/index.html">Kutatás</a></li>
+          <li><a href="../battleships/index.html">Harcászat</a></li>
+          <li><a href="../aboutus/index.html">Rólunk</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ========================================
+         OLDAL FEJLÉC
+         Bányászati járművek kategória bemutatása
+         ======================================== -->
+    <div class="product-header">
+      <h1>Bányászati járművek</h1>
+      <p>Speciális felszerelések aszteroida és bolygó bányászathoz</p>
+    </div>
+
+    <!-- ========================================
+         TERMÉK LISTA
+         6 bányászati űrhajó bemutatása
+         ======================================== -->
+    <section>
+      <div class="container">
+        <div class="products-grid">
+          <!-- TERMÉK 1: Asteroid Miner AM-5 -->
+          <!-- Középméretű aszteroida bányász -->
+          <a href="asteroid-miner-am5.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img src="../../assets/images/asteroid-miner-am5.jpg" alt="Asteroid Miner AM-5" />
+            </div>
+            <div class="product-info">
+              <h3>Asteroid Miner AM-5</h3>
+              <p>
+                Középméretű aszteroida bányász hajó fejlett lézeres bányászati rendszerrel. Ideális
+                választás kisebb aszteroidák feldolgozásához.
+              </p>
+              <!-- Műszaki specifikációk -->
+              <ul class="product-specs">
+                <li><strong>Bányászati kapacitás:</strong> 500 tonna/nap</li>
+                <li><strong>Tárolókapacitás:</strong> 3000 m³</li>
+                <li><strong>Max. sebesség:</strong> 0.12c</li>
+                <li><strong>Legénység:</strong> 15 fő</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- TERMÉK 2: Deep Core Excavator DCE-12 -->
+          <!-- Planetáris mélyfúró bányász -->
+          <a href="deep-core-excavator-dce12.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img
+                src="../../assets/images/deep-core-excavator-dce.jpg"
+                alt="Deep Core Excavator DCE-12"
+              />
+            </div>
+            <div class="product-info">
+              <h3>Deep Core Excavator DCE-12</h3>
+              <p>
+                Nehéz planetáris bányász jármű mélyfúrási képességgel. Képes bolygók kéregébe
+                hatolni ritkaföldfémek kitermelésére.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Fúrási mélység:</strong> 15 km</li>
+                <li><strong>Bányászati kapacitás:</strong> 1200 tonna/nap</li>
+                <li><strong>Tárolókapacitás:</strong> 8000 m³</li>
+                <li><strong>Legénység:</strong> 35 fő</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- TERMÉK 3: Ore Processor OP-9 -->
+          <!-- Mobil ércdolgozó állomás -->
+          <a href="ore-processor-op9.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img src="../../assets/images/ore-processor-op9.jpg" alt="Ore Processor OP-9" />
+            </div>
+            <div class="product-info">
+              <h3>Ore Processor OP-9</h3>
+              <p>
+                Mobil ércdolgozó állomás, amely helyben finomítja a kitermelt nyersanyagokat. Növeli
+                a bányászati műveletek hatékonyságát.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Feldolgozási kapacitás:</strong> 800 tonna/nap</li>
+                <li><strong>Finomítási fok:</strong> 98%</li>
+                <li><strong>Üzemidő:</strong> Folyamatos</li>
+                <li><strong>Személyzet:</strong> 20 fő</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- TERMÉK 4: Prospector Drone PD-3 -->
+          <!-- Automatizált felderítő drón -->
+          <a href="prospector-drone-pd3.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img src="../../assets/images/prospector-drone-pd3.jpg" alt="Prospector Drone PD-3" />
+            </div>
+            <div class="product-info">
+              <h3>Prospector Drone PD-3</h3>
+              <p>
+                Automatizált felderítő drón ásványkincsek azonosítására. Felszerelve spektrométerrel
+                és radar rendszerrel.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Szkennelési hatótáv:</strong> 100 km</li>
+                <li><strong>Autonómia:</strong> 90 nap</li>
+                <li><strong>Max. sebesség:</strong> 0.08c</li>
+                <li><strong>Működés:</strong> Automata</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- TERMÉK 5: Ice Harvester IH-7 -->
+          <!-- Vízjég kitermelő jármű -->
+          <a href="ice-harvester-ih7.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img src="../../assets/images/ice-harvester-ih7.jpg" alt="Ice Harvester IH-7" />
+            </div>
+            <div class="product-info">
+              <h3>Ice Harvester IH-7</h3>
+              <p>
+                Speciális jármű vízjég kitermelésére üstökösökről és jégbolygókról. Víz és oxigén
+                előállításhoz nélkülözhetetlen.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Kitermelési kapacitás:</strong> 600 tonna/nap</li>
+                <li><strong>Tárolókapacitás:</strong> 4500 m³</li>
+                <li><strong>Hőmérséklet-tartomány:</strong> -273°C - +50°C</li>
+                <li><strong>Legénység:</strong> 10 fő</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- TERMÉK 6: Gas Giant Extractor GGE-4 -->
+          <!-- Atmoszférikus gázbányász -->
+          <a href="gas-giant-extractor-gge4.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img
+                src="../../assets/images/gas-giant-extractor-gge.jpg"
+                alt="Gas Giant Extractor GGE-4"
+              />
+            </div>
+            <div class="product-info">
+              <h3>Gas Giant Extractor GGE-4</h3>
+              <p>
+                Atmoszférikus bányász állomás gázóriások légköréből való hélium-3 és egyéb
+                nemesgázok kinyerésére.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Kitermelési kapacitás:</strong> 200 tonna/nap</li>
+                <li><strong>Működési magasság:</strong> 50-200 km</li>
+                <li><strong>Tárolókapacitás:</strong> 5000 m³</li>
+                <li><strong>Személyzet:</strong> 25 fő</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER (LÁBLÉC)
+         ======================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>E-CORE Űrjárművek</h4>
+            <p>Az űrutazás következő generációja</p>
+          </div>
+          <div class="footer-section">
+            <h4>Kapcsolat</h4>
+            <p>Email:&nbsp;<a href="mailto:ex.co.or.rre.en@gmail.com">info@ecore-space.com</a></p>
+            <p>Tel: +36 70 724 3066</p>
+            <p>HR:&nbsp;<a href="mailto:ex.co.or.rre.en@gmail.com">karrier@ecore-space.com</a></p>
+          </div>
+          <div class="footer-section">
+            <h4>Gyors linkek</h4>
+            <ul>
+              <li><a href="../aboutus/index.html">Rólunk</a></li>
+              <li><a href="../carreers/index.html">Karrier</a></li>
+              <li><a href="#">Támogatás</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 E-CORE Űrjárművek. Minden jog fenntartva.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========================================
+        JAVASCRIPT - Hamburger menü működése
+        ======================================== -->
+    <script>
+      // Hamburger menü elemek kiválasztása
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+
+      // Kattintás eseménykezelő a hamburger gombra
+      hamburger.addEventListener('click', () => {
+        // Toggle (kapcsoló) az aktív osztályokra
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      // Menü bezárása, ha egy linkre kattintunk
+      document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/bijection/smoke.js@master/smoke.js"></script>
+
+    <!-- ========================================
+        JAVASCRIPT - Füst effekt a bányajármű képeken
+        ======================================== -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const imageContainers = document.querySelectorAll('.product-image-container');
+
+        imageContainers.forEach(container => {
+          const canvas = container.querySelector('.smoke-canvas');
+          const img = container.querySelector('img');
+
+          if (!canvas || !img) return;
+
+          const initSmoke = () => {
+            canvas.width = img.offsetWidth;
+            canvas.height = img.offsetHeight;
+
+            const ctx = canvas.getContext('2d');
+            const smokeColor = [180, 180, 180];
+            const smokeMachine = SmokeMachine(ctx, smokeColor);
+
+            smokeMachine.start();
+
+            let smokeIntensity = 1;
+            let targetIntensity = 0.75;
+            let lastTime = Date.now();
+
+            container.addEventListener('mouseenter', () => {
+              targetIntensity = 0.25;
+            });
+
+            container.addEventListener('mouseleave', () => {
+              targetIntensity = 0.5;
+            });
+
+            function animate() {
+              const currentTime = Date.now();
+              const deltaTime = currentTime - lastTime;
+              lastTime = currentTime;
+
+              smokeIntensity += (targetIntensity - smokeIntensity) * 0.03;
+
+              if (Math.random() < smokeIntensity * 0.12) {
+                const x = Math.random() * canvas.width;
+                const y = canvas.height - 10;
+                const particleCount = 1;
+
+                smokeMachine.addsmoke(x, y, particleCount);
+              }
+
+              smokeMachine.step(deltaTime * 0.3);
+
+              requestAnimationFrame(animate);
+            }
+
+            animate();
+          };
+
+          if (img.complete) {
+            initSmoke();
+          } else {
+            img.addEventListener('load', initSmoke);
+          }
+        });
+
+        window.addEventListener('resize', () => {
+          imageContainers.forEach(container => {
+            const canvas = container.querySelector('.smoke-canvas');
+            const img = container.querySelector('img');
+
+            if (canvas && img) {
+              canvas.width = img.offsetWidth;
+              canvas.height = img.offsetHeight;
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

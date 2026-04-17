@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Core Űrjárművek - Harcászati járművek</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+    <style>
+      .product-item {
+        position: relative;
+      }
+
+      .product-image-container {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .product-item img {
+        display: block;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+      }
+
+      .smoke-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ========================================
+         NAVIGÁCIÓS SÁV
+         ======================================== -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Logó -->
+        <div class="logo">
+          <a href="../../index.html">
+            <img src="../../assets/logo.png" alt="E-CORE logo" />
+            E-CORE
+          </a>
+        </div>
+
+        <!-- Hamburger menü gomb (csak mobillon látszik) -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Főmenü linkek -->
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../commercial/index.html">Kereskedelem</a></li>
+          <li><a href="../mining/index.html">Bányászat</a></li>
+          <li><a href="../research/index.html">Kutatás</a></li>
+          <li><a href="../battleships/index.html" class="active">Harcászat</a></li>
+          <li><a href="../aboutus/index.html">Rólunk</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ========================================
+         OLDAL FEJLÉC
+         Harcászati járművek kategória bemutatása
+         ======================================== -->
+    <div class="product-header">
+      <h1>Harcászati járművek</h1>
+      <p>Védelmi és biztonsági célú űrjárművek</p>
+    </div>
+
+    <!-- ========================================
+         TERMÉK LISTA
+         6 harcászati űrhajó bemutatása
+         ======================================== -->
+    <section>
+      <div class="container">
+        <div class="products-grid">
+          <!-- TERMÉK 1: Interceptor Hawk IH-22 -->
+          <!-- Gyors vadászgép -->
+          <a href="interceptor-hawk-ih22.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img
+                src="../../assets/images/interceptor-hawk-ih22.jpg"
+                alt="Interceptor Hawk IH-22"
+              />
+            </div>
+            <div class="product-info">
+              <h3>Interceptor Hawk IH-22</h3>
+              <p>
+                Gyors és agilis vadászgép űrbeli védelmi műveletekhez. Kiváló manőverezőképesség és
+                reakcióidő.
+              </p>
+              <!-- Műszaki specifikációk -->
+              <ul class="product-specs">
+                <li><strong>Max. sebesség:</strong> 0.60c</li>
+                <li><strong>Fegyverzet:</strong> Lézerdirektoros, rakéták</li>
+                <li><strong>Páncélzat:</strong> Közepes</li>
+                <li><strong>Pilóta:</strong> 1 fő</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- TERMÉK 2: Corvette Guardian CG-15 -->
+          <!-- Könnyű fregatt -->
+          <a href="corvette-guardian-cg15.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img
+                src="../../assets/images/corvette-guardian-cg15.jpg"
+                alt="Corvette Guardian CG-15"
+              />
+            </div>
+            <div class="product-info">
+              <h3>Corvette Guardian CG-15</h3>
+              <p>
+                Könnyű fregatt patrulírozáshoz és konvoj-kíséréshez. Kiegyensúlyozott védelmi és
+                támadó képességek.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Max. sebesség:</strong> 0.35c</li>
+                <li><strong>Fegyverzet:</strong> Multispektrális lézerdirektorok</li>
+                <li><strong>Páncélzat:</strong> Nehéz</li>
+                <li><strong>Legénység:</strong> 25 fő</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- TERMÉK 3: Destroyer Titan DT-9 -->
+          <!-- Nehéz romboló -->
+          <a href="destroyer-titan-dt9.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img src="../../assets/images/destroyer-titan-dt9.jpg" alt="Destroyer Titan DT-9" />
+            </div>
+            <div class="product-info">
+              <h3>Destroyer Titan DT-9</h3>
+              <p>
+                Nehéz romboló flottaműveletek gerincéként. Hatalmas tűzerő és erős védelmi
+                rendszerek.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Max. sebesség:</strong> 0.25c</li>
+                <li><strong>Fegyverzet:</strong> Railgunak, torpedóvetők</li>
+                <li><strong>Páncélzat:</strong> Extra nehéz</li>
+                <li><strong>Legénység:</strong> 180 fő</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- TERMÉK 4: Stealth Phantom SP-7 -->
+          <!-- Lopakodó űrhajó -->
+          <a href="stealth-phantom-sp7.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img src="../../assets/images/stealth-phantom-sp7.jpg" alt="Stealth Phantom SP-7" />
+            </div>
+            <div class="product-info">
+              <h3>Stealth Phantom SP-7</h3>
+              <p>
+                Lopakodó űrhajó felderítő és különleges műveletekhez. Fejlett álcázó technológia és
+                csendes hajtómű.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Max. sebesség:</strong> 0.45c</li>
+                <li><strong>Fegyverzet:</strong> Precíziós rakéták</li>
+                <li><strong>Észlelhetőség:</strong> Minimális</li>
+                <li><strong>Legénység:</strong> 8 fő</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- TERMÉK 5: Carrier Fortress CF-3 -->
+          <!-- Óriás űrhordozó -->
+          <a href="carrier-fortress-cf3.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img src="../../assets/images/carrier-fortress-cf3.jpg" alt="Carrier Fortress CF-3" />
+            </div>
+            <div class="product-info">
+              <h3>Carrier Fortress CF-3</h3>
+              <p>
+                Óriás űrhordozó 100+ vadászgép és támogató hajók szállítására. Mobil parancsnoki
+                központ.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Hangárkapacitás:</strong> 120 jármű</li>
+                <li><strong>Fegyverzet:</strong> Védelmi rendszerek</li>
+                <li><strong>Páncélzat:</strong> Erőd szintű</li>
+                <li><strong>Legénység:</strong> 2500 fő</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- TERMÉK 6: Defense Platform DP-11 -->
+          <!-- Moduláris védelmi platform -->
+          <a href="defense-platform-dp11.html" class="product-item">
+            <div class="product-image-container">
+              <canvas class="smoke-canvas"></canvas>
+              <img
+                src="../../assets/images/defense-platform-dp11.jpg"
+                alt="Defense Platform DP-11"
+              />
+            </div>
+            <div class="product-info">
+              <h3>Defense Platform DP-11</h3>
+              <p>
+                Moduláris védelmi platform űrállomások és bolygók védelmére. Telepíthető és
+                bővíthető rendszer.
+              </p>
+              <ul class="product-specs">
+                <li><strong>Fegyverzet:</strong> Railgunak, rakétasiló</li>
+                <li><strong>Hatótáv:</strong> 50,000 km</li>
+                <li><strong>Üzemidő:</strong> 20 év</li>
+                <li><strong>Személyzet:</strong> 45 fő</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER (LÁBLÉC)
+         ======================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>E-CORE Űrjárművek</h4>
+            <p>Az űrutazás következő generációja</p>
+          </div>
+          <div class="footer-section">
+            <h4>Kapcsolat</h4>
+            <p>Email:&nbsp;<a href="mailto:ex.co.or.rre.en@gmail.com">info@ecore-space.com</a></p>
+            <p>Tel: +36 70 724 3066</p>
+            <p>HR:&nbsp;<a href="mailto:ex.co.or.rre.en@gmail.com">karrier@ecore-space.com</a></p>
+          </div>
+          <div class="footer-section">
+            <h4>Gyors linkek</h4>
+            <ul>
+              <li><a href="../aboutus/index.html">Rólunk</a></li>
+              <li><a href="../carreers/index.html">Karrier</a></li>
+              <li><a href="#">Támogatás</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 E-CORE Űrjárművek. Minden jog fenntartva.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- ========================================
+        JAVASCRIPT - Hamburger menü működése
+        ======================================== -->
+    <script>
+      // Hamburger menü elemek kiválasztása
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+
+      // Kattintás eseménykezelő a hamburger gombra
+      hamburger.addEventListener('click', () => {
+        // Toggle (kapcsoló) az aktív osztályokra
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      // Menü bezárása, ha egy linkre kattintunk
+      document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/bijection/smoke.js@master/smoke.js"></script>
+
+    <!-- ========================================
+        JAVASCRIPT - Füst effekt a harcjármű képeken
+        ======================================== -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const imageContainers = document.querySelectorAll('.product-image-container');
+
+        imageContainers.forEach(container => {
+          const canvas = container.querySelector('.smoke-canvas');
+          const img = container.querySelector('img');
+
+          if (!canvas || !img) return;
+
+          const initSmoke = () => {
+            canvas.width = img.offsetWidth;
+            canvas.height = img.offsetHeight;
+
+            const ctx = canvas.getContext('2d');
+            const smokeColor = [180, 180, 180];
+            const smokeMachine = SmokeMachine(ctx, smokeColor);
+
+            smokeMachine.start();
+
+            let smokeIntensity = 1;
+            let targetIntensity = 0.75;
+            let lastTime = Date.now();
+
+            container.addEventListener('mouseenter', () => {
+              targetIntensity = 0.25;
+            });
+
+            container.addEventListener('mouseleave', () => {
+              targetIntensity = 0.5;
+            });
+
+            function animate() {
+              const currentTime = Date.now();
+              const deltaTime = currentTime - lastTime;
+              lastTime = currentTime;
+
+              smokeIntensity += (targetIntensity - smokeIntensity) * 0.03;
+
+              if (Math.random() < smokeIntensity * 0.12) {
+                const x = Math.random() * canvas.width;
+                const y = canvas.height - 10;
+                const particleCount = 1;
+
+                smokeMachine.addsmoke(x, y, particleCount);
+              }
+
+              smokeMachine.step(deltaTime * 0.3);
+
+              requestAnimationFrame(animate);
+            }
+
+            animate();
+          };
+
+          if (img.complete) {
+            initSmoke();
+          } else {
+            img.addEventListener('load', initSmoke);
+          }
+        });
+
+        window.addEventListener('resize', () => {
+          imageContainers.forEach(container => {
+            const canvas = container.querySelector('.smoke-canvas');
+            const img = container.querySelector('img');
+
+            if (canvas && img) {
+              canvas.width = img.offsetWidth;
+              canvas.height = img.offsetHeight;
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

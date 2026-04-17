@@ -1,0 +1,1232 @@
+/* ==========================================
+   E-CORE ŰRJÁRMŰVEK - STÍLUSLAP
+   ==========================================
+
+   Ez a stíluslap az E-Core űrjármű gyártó cég
+   összes oldalához tartozik. A dizájn űr témájú,
+   sötét háttérrel és ciánkék kiemelésekkel.
+*/
+
+/* ==========================================
+   CSS VÁLTOZÓK - Színek és méretek
+   ========================================== */
+:root {
+  /* Fő színek */
+  --color-primary: #ff9100; /* Narancs - fő kiemelő szín */
+  --color-primary-dark: #0099ff; /* Sötétebb ciánkék - gradiens */
+  --color-background: #040407; /* Fő háttérszín - sötét */
+  --color-background-alt: #181f25; /* Alternatív háttér */
+  --color-surface: #1a1f2e; /* Felületek háttere */
+  --color-surface-alpha: rgba(26, 31, 46, 0.6); /* Átlátszó felület */
+
+  /* Szöveg színek */
+  --color-text-primary: #e0e6ed; /* Fő szöveg szín */
+  --color-text-secondary: #b8c5d6; /* Másodlagos szöveg */
+  --color-text-muted: #7a8896; /* Halvány szöveg */
+
+  /* Border és árnyék színek */
+  --color-border: rgba(255, 145, 0, 0.2);
+  --color-border-hover: rgba(255, 145, 0, 0.5);
+  --color-shadow: rgba(255, 145, 0, 0.3);
+
+  /* Méretek */
+  --container-max-width: 1200px;
+  --border-radius: 10px;
+  --border-radius-small: 5px;
+
+  /* Spacings */
+  --spacing-small: 1rem;
+  --spacing-medium: 2rem;
+  --spacing-large: 3rem;
+  --spacing-xlarge: 5rem;
+
+  /* Betűméretek */
+  --font-size-small: 1.1rem;
+  --font-size-medium: 1.5rem;
+  --font-size-large: 2.5rem;
+  --font-size-xlarge: 3rem;
+  --font-size-hero: 3.5rem;
+
+  /* Átmenetek */
+  --transition-fast: 0.3s ease;
+}
+
+/* ==========================================
+   ALAPVETŐ STÍLUSOK
+   ========================================== */
+
+/* Globális reset és alapbeállítások */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body - az oldal fő konténere */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+/* Container - központosított tartalom konténer */
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================
+   NAVIGÁCIÓS SÁV
+   ========================================== */
+
+/* Fő navigációs sáv - ragadós pozícióval az oldal tetején */
+.navbar {
+  background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-background-alt) 100%);
+  padding: var(--spacing-small) 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigációs tartalom konténere */
+.nav-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* E-CORE logó */
+.logo {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.15rem;
+  text-shadow: none;
+  z-index: 1001;
+}
+
+.logo a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.logo img {
+  height: 2.25rem;
+  width: auto;
+  filter: saturate(0.3);
+}
+
+/* Navigációs menü lista */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-medium);
+}
+
+/* Menü linkek alapállapota */
+.nav-menu a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem var(--spacing-small);
+  transition: all var(--transition-fast);
+  border-bottom: 2px solid transparent;
+}
+
+/* Menü linkek hover és aktív állapota */
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+/* ==========================================
+   HAMBURGER MENÜ (MOBIL)
+   ========================================== */
+
+/* Hamburger gomb konténer */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 5px;
+}
+
+/* Hamburger vonalak */
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin: 3px 0;
+  transition: all var(--transition-fast);
+  border-radius: 3px;
+  transform-origin: center;
+}
+
+/* Hamburger animáció - X alakú */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ==========================================
+   HERO SZEKCIÓ (FŐOLDAL FEJLÉC)
+   ========================================== */
+
+/* Hero szekció - két oszlopos elrendezés */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-large);
+  align-items: center;
+  padding: var(--spacing-xlarge) 20px;
+  max-width: var(--container-max-width);
+  margin: 0 auto 50px;
+  min-height: 600px;
+  position: relative;
+}
+
+/* Particles háttér */
+.hero #particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+}
+
+/* Hero főcím - gradiens szöveggel */
+.hero-content h1 {
+  font-size: var(--font-size-hero);
+  margin-bottom: var(--spacing-small);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero alcím */
+.hero-subtitle {
+  font-size: var(--font-size-medium);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-small);
+}
+
+/* Hero leírás szöveg */
+.hero-description {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-medium);
+  line-height: 1.8;
+}
+
+/* Hero kép konténer */
+.hero-image img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 40px var(--color-shadow);
+}
+
+/* Call-to-Action gomb */
+.cta-button {
+  display: inline-block;
+  padding: var(--spacing-small) 2.5rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-background);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: var(--border-radius-small);
+  transition: all var(--transition-fast);
+  box-shadow: 0 5px 20px rgba(255, 145, 0, 0.4);
+}
+
+/* CTA gomb hover effekt */
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 30px rgba(255, 145, 0, 0.6);
+}
+
+/* ==========================================
+   ÁLTALÁNOS SZEKCIÓK
+   ========================================== */
+
+/* Alapértelmezett szekció stílus */
+section {
+  padding: var(--spacing-xlarge) 20px;
+}
+
+/* Szekció címek */
+section h2 {
+  text-align: center;
+  font-size: var(--font-size-large);
+  margin-bottom: var(--spacing-large);
+  color: var(--color-primary);
+}
+
+/* ==========================================
+   FUNKCIÓK SZEKCIÓ (FEATURES)
+   ========================================== */
+
+/* Features szekció háttere */
+.features {
+  background: linear-gradient(180deg, var(--color-background) 0%, var(--color-background-alt) 100%);
+}
+
+/* Features grid elrendezés */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-medium);
+}
+
+/* Feature kártya */
+.feature-card {
+  background: var(--color-surface-alpha);
+  padding: var(--spacing-medium);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+/* Feature kártya hover effekt */
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-border-hover);
+  box-shadow: 0 10px 30px rgba(255, 145, 0, 0.2);
+}
+
+/* Feature ikon */
+.feature-card img {
+  width: 160px;
+  height: 160px;
+  margin-bottom: 1.5rem;
+  border-radius: 50%;
+}
+
+/* Feature cím */
+.feature-card h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-small);
+  font-size: 1.4rem;
+}
+
+/* ==========================================
+   TERMÉK KATEGÓRIÁK (FŐOLDAL)
+   ========================================== */
+
+/* Termék kategória grid */
+.product-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-medium);
+}
+
+/* Kategória kártya link */
+.category-card {
+  background: var(--color-surface-alpha);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-fast);
+}
+
+/* Kategória kártya hover */
+.category-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-border-hover);
+  box-shadow: 0 10px 30px var(--color-shadow);
+}
+
+/* Kategória kép */
+.category-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Kategória cím */
+.category-card h3 {
+  padding: 1.5rem 1.5rem 0.5rem;
+  color: var(--color-primary);
+  font-size: 1.3rem;
+}
+
+/* Kategória leírás */
+.category-card p {
+  padding: 0 1.5rem 1.5rem;
+  color: var(--color-text-secondary);
+}
+
+/* ==========================================
+   TERMÉK RÉSZLETEK OLDALAK
+   ========================================== */
+
+/* Termék oldal fejléc */
+.product-header {
+  text-align: center;
+  padding: var(--spacing-large) 20px;
+  background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-background-alt) 100%);
+}
+
+/* Termék oldal főcím */
+.product-header h1 {
+  font-size: var(--font-size-xlarge);
+  margin-bottom: var(--spacing-small);
+  color: var(--color-primary);
+}
+
+/* Termékek grid elrendezése */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-large);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--spacing-large) 20px;
+}
+
+/* Egyedi termék kártya */
+.product-item {
+  background: var(--color-surface-alpha);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  color: var(--color-text-primary);
+}
+
+/* Termék kártya hover */
+.product-item:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: 0 10px 30px var(--color-shadow);
+}
+
+/* Termék kép */
+.product-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Termék információs rész */
+.product-info {
+  padding: var(--spacing-medium);
+}
+
+/* Termék neve */
+.product-info h3 {
+  color: var(--color-primary);
+  font-size: var(--font-size-medium);
+  margin-bottom: var(--spacing-small);
+}
+
+/* Termék specifikációk lista */
+.product-specs {
+  list-style: none;
+  margin: 1.5rem 0;
+  color: var(--color-text-secondary);
+}
+
+/* Specifikáció lista elem */
+.product-specs li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 145, 0, 0.1);
+}
+
+/* Utolsó lista elem (nincs alsó border) */
+.product-specs li:last-child {
+  border-bottom: none;
+}
+
+/* Specifikáció címkék (strong) */
+.product-specs strong {
+  color: var(--color-primary);
+}
+
+/* ==========================================
+   RÓLUNK OLDAL
+   ========================================== */
+
+/* Rólunk tartalom konténer */
+.about-content {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--spacing-large) 20px;
+}
+
+/* Rólunk két oszlopos grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-large);
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+/* Rólunk szöveg cím */
+.about-text h3 {
+  color: var(--color-primary);
+  font-size: var(--spacing-medium);
+  margin-bottom: 1.5rem;
+}
+
+/* Rólunk bekezdések */
+.about-text p {
+  margin-bottom: var(--spacing-small);
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+/* Rólunk képek */
+.about-image img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 40px rgba(255, 145, 0, 0.2);
+}
+
+/* Értékek grid */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-large);
+}
+
+/* Érték kártya */
+.value-card {
+  background: var(--color-surface-alpha);
+  padding: var(--spacing-medium);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+}
+
+/* Érték kártya cím */
+.value-card h4 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-small);
+  font-size: 1.3rem;
+}
+
+/* ==========================================
+   VIDEÓ SZEKCIÓ
+   ========================================== */
+
+/* Videó szekció konténer */
+.video-section {
+  padding: var(--spacing-xlarge) 20px;
+  background: linear-gradient(180deg, var(--color-background) 0%, var(--color-background-alt) 100%);
+}
+
+.video-section h2 {
+  text-align: center;
+  color: var(--color-primary);
+  font-size: var(--font-size-large);
+  margin-bottom: var(--spacing-large);
+}
+
+/* Videó konténer */
+.video-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 10px 40px var(--color-shadow);
+  border: 2px solid var(--color-border);
+  position: relative;
+}
+
+/* Videó elem */
+.factory-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: var(--color-background);
+}
+
+/* Videó hover effekt */
+.video-container:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: 0 15px 50px rgba(255, 145, 0, 0.4);
+  transform: translateY(-5px);
+  transition: all var(--transition-fast);
+}
+
+/* ==========================================
+   KARRIER OLDAL STÍLUSOK
+   ========================================== */
+
+/* Állás kártya */
+.job-card {
+  background: var(--color-surface-alpha);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+/* Állás kártya hover */
+.job-card:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: 0 10px 30px var(--color-shadow);
+  transform: translateY(-3px);
+}
+
+/* Kiemelt állás kártya */
+.job-featured {
+  border: 2px solid var(--color-primary);
+  background: linear-gradient(135deg, rgba(255, 145, 0, 0.05) 0%, var(--color-surface-alpha) 100%);
+}
+
+/* Kiemelt badge */
+.featured-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-background);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(255, 145, 0, 0.4);
+}
+
+/* Állás fejléc */
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+/* Állás cím */
+.job-title {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Állás osztály */
+.job-department {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+/* Pozíciók száma */
+.job-count {
+  background: rgba(255, 145, 0, 0.15);
+  color: var(--color-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* Állás részletek */
+.job-details {
+  margin-bottom: 1.5rem;
+}
+
+/* Állás leírás */
+.job-description {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Állás követelmények */
+.job-requirements {
+  background: rgba(255, 145, 0, 0.05);
+  padding: 0.8rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+
+.job-requirements strong {
+  color: var(--color-primary);
+}
+
+/* Állás meta információk */
+.job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.job-meta span {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  padding: 0.3rem 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+}
+
+/* Jelentkezés gomb */
+.apply-button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-background);
+  border: none;
+  border-radius: var(--border-radius-small);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 15px rgba(255, 145, 0, 0.3);
+}
+
+.apply-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(255, 145, 0, 0.5);
+}
+
+/* ==========================================
+   FOOTER (LÁBLÉC)
+   ========================================== */
+
+/* Fő footer konténer */
+.footer {
+  background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-background-alt) 100%);
+  padding: var(--spacing-large) 20px var(--spacing-small);
+  margin-top: var(--spacing-xlarge);
+  border-top: 1px solid var(--color-border);
+}
+
+/* Footer tartalom grid */
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+}
+
+/* Footer szekció címek */
+.footer-section h4 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-small);
+}
+
+/* Footer szövegek */
+.footer-section p {
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+/* Footer listák */
+.footer-section ul {
+  list-style: none;
+}
+
+/* Footer lista elemek */
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer linkek */
+.footer-section a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+/* Footer link hover */
+.footer-section a:hover {
+  color: var(--color-primary);
+}
+
+/* Footer alsó rész (copyright) */
+.footer-bottom {
+  text-align: center;
+  padding-top: var(--spacing-medium);
+  border-top: 1px solid rgba(255, 145, 0, 0.1);
+  color: var(--color-text-muted);
+}
+
+/* ==========================================
+   ŰRHAJÓ RÉSZLETES OLDAL
+   ========================================== */
+
+/* Űrhajó részletek szekció */
+.ship-detail {
+  padding: var(--spacing-large) 20px;
+  min-height: 100vh;
+}
+
+/* Vissza gomb */
+.back-button {
+  display: inline-block;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-medium);
+  transition: all var(--transition-fast);
+}
+
+.back-button:hover {
+  transform: translateX(-5px);
+}
+
+/* Űrhajó fejléc */
+.ship-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-large);
+  align-items: center;
+  margin-bottom: var(--spacing-xlarge);
+  padding: var(--spacing-large);
+  background: var(--color-surface-alpha);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+}
+
+/* Nagy űrhajó kép */
+.ship-image-large {
+  position: relative;
+}
+
+.ship-image-large .smoke-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.ship-image-large img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 40px var(--color-shadow);
+  position: relative;
+  z-index: 1;
+}
+
+/* Űrhajó cím szekció */
+.ship-title-section h1 {
+  font-size: var(--font-size-xlarge);
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.ship-category {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-small);
+}
+
+.ship-tagline {
+  font-size: 1.3rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+/* Űrhajó tartalom grid */
+.ship-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--spacing-large);
+}
+
+/* Leírás szekció */
+.ship-description {
+  background: var(--color-surface-alpha);
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+}
+
+.ship-description h2 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-small);
+  font-size: var(--font-size-medium);
+}
+
+.ship-description h3 {
+  color: var(--color-primary);
+  margin-top: var(--spacing-medium);
+  margin-bottom: var(--spacing-small);
+  font-size: 1.3rem;
+}
+
+.ship-description p {
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-small);
+}
+
+/* Jellemzők lista */
+.features-list {
+  list-style: none;
+  margin: var(--spacing-small) 0;
+}
+
+.features-list li {
+  color: var(--color-text-secondary);
+  padding: 0.5rem 0;
+  line-height: 1.7;
+}
+
+/* Részletes specifikációk */
+.ship-specs-detailed {
+  background: var(--color-surface-alpha);
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+}
+
+.ship-specs-detailed h2 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-medium);
+  font-size: var(--font-size-medium);
+}
+
+/* Responsive tweaks for reviews & spec cards */
+.ship-description,
+.ship-specs-detailed {
+  width: 100%;
+}
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specs-table td {
+  display: table-cell;
+}
+
+.specs-table td:last-child {
+  text-align: right;
+}
+
+/* Spec szekció */
+.spec-section {
+  margin-bottom: var(--spacing-medium);
+}
+
+.spec-section h4 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-small);
+  font-size: 1.1rem;
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 0.5rem;
+}
+
+/* Specifikációs táblázat */
+.specs-table {
+  width: 100%;
+  margin-top: var(--spacing-small);
+}
+
+.specs-table tr {
+  border-bottom: 1px solid rgba(255, 145, 0, 0.1);
+}
+
+.specs-table tr:last-child {
+  border-bottom: none;
+}
+
+.specs-table td {
+  padding: 0.7rem 0;
+  color: var(--color-text-secondary);
+}
+
+.specs-table td:first-child {
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.specs-table td:last-child {
+  text-align: right;
+  color: var(--color-text-primary);
+}
+
+/* Ár szekció */
+.price-section {
+  margin-top: var(--spacing-large);
+  padding: var(--spacing-medium);
+  background: linear-gradient(135deg, rgba(255, 145, 0, 0.1) 0%, rgba(0, 153, 255, 0.1) 100%);
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.price-section h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-small);
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin: var(--spacing-small) 0;
+}
+
+.availability {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-medium);
+}
+
+.price-section .cta-button {
+  width: 100%;
+}
+
+/* Reszponzív - Űrhajó részletek */
+@media (max-width: 768px) {
+  .ship-header {
+    grid-template-columns: 1fr;
+  }
+
+  .ship-content {
+    grid-template-columns: 1fr;
+  }
+
+  .ship-title-section h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .ship-description,
+  .ship-specs-detailed {
+    padding: 1.5rem;
+  }
+
+  .ship-specs-detailed h2 {
+    font-size: 1.4rem;
+  }
+
+  .specs-table {
+    display: block;
+  }
+
+  .specs-table tr {
+    display: flex;
+    flex-direction: column;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(255, 145, 0, 0.1);
+  }
+
+  .specs-table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 0;
+  }
+
+  .specs-table td:first-child {
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .specs-table td:last-child {
+    text-align: left;
+    color: var(--color-text-primary);
+  }
+
+  .price-section {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .ship-header {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .ship-description,
+  .ship-specs-detailed {
+    padding: 1rem;
+  }
+
+  .ship-content {
+    gap: 1rem;
+  }
+
+  .spec-section {
+    margin-bottom: 0.5rem;
+  }
+
+  .price-section {
+    padding: 0.75rem;
+  }
+}
+
+/* ==========================================
+   RESZPONZÍV DESIGN (TABLET - 768px alatt)
+   ========================================== */
+
+@media (max-width: 768px) {
+  /* Hamburger megjelenítése */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Navigációs menü mobilon */
+  .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 70px;
+    flex-direction: column;
+    background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-background-alt) 100%);
+    width: 100%;
+    text-align: center;
+    transition: right 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.5);
+    padding: 2rem 0;
+    gap: 0;
+  }
+
+  /* Menü megjelenítése aktív állapotban */
+  .nav-menu.active {
+    right: 0;
+  }
+
+  /* Menü elemek mobilon */
+  .nav-menu li {
+    margin: 0;
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  /* Hero egy oszlopos */
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 3rem 20px;
+  }
+
+  /* Kisebb hero cím mobillon */
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  /* Rólunk grid egy oszlopos */
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Termékek grid kisebb min-width */
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Feature grid kisebb */
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Kategóriák egy oszlopos */
+  .product-categories {
+    grid-template-columns: 1fr;
+  }
+
+  /* Kisebb section padding */
+  section {
+    padding: 3rem 20px;
+  }
+
+  /* Kisebb section címek */
+  section h2 {
+    font-size: 2rem;
+  }
+
+  /* Footer grid kisebb */
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .container {
+    padding: 0;
+  }
+}
+
+/* ==========================================
+   RESZPONZÍV DESIGN (MOBIL - 480px alatt)
+   ========================================== */
+
+@media (max-width: 480px) {
+  /* Logo kisebb */
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  /* Hero még kisebb címek */
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  /* CTA gomb kisebb */
+  .cta-button {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  /* Product header kisebb */
+  .product-header h1 {
+    font-size: 2rem;
+  }
+
+  /* Termék kártya kisebb padding */
+  .product-info {
+    padding: 1.5rem;
+  }
+
+  /* Termék név kisebb */
+  .product-info h3 {
+    font-size: 1.3rem;
+  }
+}
