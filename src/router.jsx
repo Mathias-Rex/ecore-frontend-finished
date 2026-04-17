@@ -1,4 +1,4 @@
-import { createRouter, createRootRoute, createRoute } from '@tanstack/react-router';
+import { createRouter, createRootRoute, createRoute, notFound } from '@tanstack/react-router';
 import { MainLayout } from './layouts/MainLayout';
 import { AdminLayout } from './layouts/AdminLayout';
 import { Home } from './pages/Home';
@@ -12,6 +12,14 @@ import { AdminAddSpacecraft } from './pages/AdminAddSpacecraft';
 import { AdminSpacecrafts } from './pages/AdminSpacecrafts';
 import { AdminEditSpacecraft } from './pages/AdminEditSpacecraft';
 import { Login } from './pages/Login';
+import { API_URL } from './config';
+
+const categoryTypeMap = {
+  commercial: 'commercial',
+  mining: 'mining',
+  research: 'research',
+  battleships: 'battleship',
+};
 
 const rootRoute = createRootRoute({
   component: MainLayout,
@@ -39,12 +47,30 @@ const careersRoute = createRoute({
 const categoryRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/category/$category',
+  loader: async ({ params }) => {
+    const type = categoryTypeMap[params.category] || params.category;
+    const res = await fetch(`${API_URL}/api/spacecrafts/type/${type}`, {
+      credentials: 'omit',
+      headers: { Accept: 'application/json' },
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return res.json();
+  },
   component: Category,
 });
 
 const spacecraftRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/spacecraft/$id',
+  loader: async ({ params }) => {
+    const res = await fetch(`${API_URL}/api/spacecrafts/${params.id}`, {
+      credentials: 'omit',
+      headers: { Accept: 'application/json' },
+    });
+    if (res.status === 404) throw notFound();
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return res.json();
+  },
   component: SpacecraftDetail,
 });
 
