@@ -4,12 +4,12 @@ Ez a dokumentum leírja, hogy mely specifikációs mezők mely űrhajó típusok
 
 ## Kereskedelmi (commercial)
 
-| Mező | Leírás |
-|------|-------|
-| `cargo.space` | Rakománytér mérete (m³) |
+| Mező            | Leírás                     |
+| --------------- | -------------------------- |
+| `cargo.space`   | Rakománytér mérete (m³)    |
 | `cargo.maxLoad` | Maximális terhelés (tonna) |
-| `cargo.type` | Rakomány típusa |
-| `cargo.docking` | Dokkolási lehetőségek |
+| `cargo.type`    | Rakomány típusa            |
+| `cargo.docking` | Dokkolási lehetőségek      |
 
 **plusz:**
 | Mező | Leírás |
@@ -24,12 +24,12 @@ Ez a dokumentum leírja, hogy mely specifikációs mezők mely űrhajó típusok
 
 ## Bányászat (mining)
 
-| Mező | Leírás |
-|------|-------|
-| `mining.extraction` | Kitermelési kapacitás |
+| Mező                | Leírás                   |
+| ------------------- | ------------------------ |
+| `mining.extraction` | Kitermelési kapacitás    |
 | `mining.processing` | Feldolgozási hatékonyság |
-| `mining.chamber` | Kamra méret |
-| `mining.dock` | Dokkolási lehetőségek |
+| `mining.chamber`    | Kamra méret              |
+| `mining.dock`       | Dokkolási lehetőségek    |
 
 **plusz:**
 | Mező | Leírás |
@@ -63,12 +63,12 @@ Ez a dokumentum leírja, hogy mely specifikációs mezők mely űrhajó típusok
 
 ## Harcászat (battleship)
 
-| Mező | Leírás |
-|------|-------|
-| `armament.lasers` | Lézerek |
-| `armament.missiles` | Rakéták |
-| `armament.drones` | Drónok |
-| `armament.attack` | Támadó fegyverzet |
+| Mező                | Leírás            |
+| ------------------- | ----------------- |
+| `armament.lasers`   | Lézerek           |
+| `armament.missiles` | Rakéták           |
+| `armament.drones`   | Drónok            |
+| `armament.attack`   | Támadó fegyverzet |
 
 **plusz:**
 | Mező | Leírás |
@@ -92,12 +92,12 @@ Ez a dokumentum leírja, hogy mely specifikációs mezők mely űrhajó típusok
 
 ## Kutatás (research)
 
-| Mező | Leírás |
-|------|-------|
-| `lab.laboratory` | Laboratórium |
-| `lab.scanner` | Szkenner |
+| Mező                | Leírás       |
+| ------------------- | ------------ |
+| `lab.laboratory`    | Laboratórium |
+| `lab.scanner`       | Szkenner     |
 | `lab.documentation` | Dokumentáció |
-| `lab.data` | Adattárolás |
+| `lab.data`          | Adattárolás  |
 
 **plusz:**
 | Mező | Leírás |
@@ -119,17 +119,17 @@ Ez a dokumentum leírja, hogy mely specifikációs mezők mely űrhajó típusok
 
 ## Összes típusra jellemző közös mezők
 
-| Mező | Leírás |
-|------|-------|
-| `performance.maxSpeed` | Maximális sebesség |
-| `performance.acceleration` | Gyorsulás |
-| `performance.range` | Hatótávolság |
-| `performance.engine` / `performance.fuel` / `performance.energy` / `performance.stabilization` | Hajtómű/energia |
-| `crew.crew` | Személyzet |
-| `crew.autonomy` / `crew.comfort` / `crew.security` / `crew.communication` | Személyzet jellemzők |
-| `dimensions.length` | Hossz |
-| `dimensions.width` | Szélesség |
-| `dimensions.height` | Magasság |
-| `dimensions.emptyMass` | Üres tömeg |
-| `pricing.price` | Ár |
-| `pricing.availability` | Elérhetőség |
+| Mező                                                                                           | Leírás               |
+| ---------------------------------------------------------------------------------------------- | -------------------- |
+| `performance.maxSpeed`                                                                         | Maximális sebesség   |
+| `performance.acceleration`                                                                     | Gyorsulás            |
+| `performance.range`                                                                            | Hatótávolság         |
+| `performance.engine` / `performance.fuel` / `performance.energy` / `performance.stabilization` | Hajtómű/energia      |
+| `crew.crew`                                                                                    | Személyzet           |
+| `crew.autonomy` / `crew.comfort` / `crew.security` / `crew.communication`                      | Személyzet jellemzők |
+| `dimensions.length`                                                                            | Hossz                |
+| `dimensions.width`                                                                             | Szélesség            |
+| `dimensions.height`                                                                            | Magasság             |
+| `dimensions.emptyMass`                                                                         | Üres tömeg           |
+| `pricing.price`                                                                                | Ár                   |
+| `pricing.availability`                                                                         | Elérhetőség          |

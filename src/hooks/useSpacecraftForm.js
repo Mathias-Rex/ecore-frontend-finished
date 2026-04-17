@@ -50,8 +50,7 @@ export const useSpacecraftForm = () => {
     });
   };
 
-  const addFeature = () =>
-    setFormData(prev => ({ ...prev, features: [...prev.features, ''] }));
+  const addFeature = () => setFormData(prev => ({ ...prev, features: [...prev.features, ''] }));
 
   const removeFeature = index =>
     setFormData(prev => ({

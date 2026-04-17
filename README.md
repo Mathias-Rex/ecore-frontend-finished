@@ -66,18 +66,18 @@ Végpontok:
 
 ## Route-ok
 
-| URL                        | Oldal                  |
-| -------------------------- | ---------------------- |
-| `/`                        | Főoldal                |
-| `/aboutus`                 | Rólunk                 |
-| `/careers`                 | Karrier                |
-| `/category/:category`      | Kategória              |
-| `/spacecraft/:id`          | Űrhajó részletek       |
-| `/login`                   | Admin bejelentkezés    |
-| `/admin`                   | Admin panel            |
-| `/admin/add-spacecraft`     | Űrhajó hozzáadása     |
-| `/admin/spacecrafts`       | Űrhajók szerkesztése   |
-| `*`                        | 404 Not Found          |
+| URL                     | Oldal                |
+| ----------------------- | -------------------- |
+| `/`                     | Főoldal              |
+| `/aboutus`              | Rólunk               |
+| `/careers`              | Karrier              |
+| `/category/:category`   | Kategória            |
+| `/spacecraft/:id`       | Űrhajó részletek     |
+| `/login`                | Admin bejelentkezés  |
+| `/admin`                | Admin panel          |
+| `/admin/add-spacecraft` | Űrhajó hozzáadása    |
+| `/admin/spacecrafts`    | Űrhajók szerkesztése |
+| `*`                     | 404 Not Found        |
 
 ## Kategóriák
 
@@ -115,11 +115,11 @@ Az admin oldalak csak bejelentkezés után elérhetők:
 
 ## Kontextusok
 
-| Kontextus | Leírás |
-|----------|--------|
-| `AuthUnlockContext` | Login/Admin Easter Egg állapot |
-| `LoadingContext` | Globális betöltési állapot |
-| `IllustrationContext` | Képek betöltése API-ból |
+| Kontextus             | Leírás                         |
+| --------------------- | ------------------------------ |
+| `AuthUnlockContext`   | Login/Admin Easter Egg állapot |
+| `LoadingContext`      | Globális betöltési állapot     |
+| `IllustrationContext` | Képek betöltése API-ból        |
 
 ## Licenc
 

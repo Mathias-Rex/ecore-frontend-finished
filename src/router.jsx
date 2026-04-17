@@ -94,6 +94,11 @@ const routeTree = rootRoute.addChildren([
   loginRoute,
 ]);
 
-adminLayoutRoute.addChildren([adminRoute, adminAddSpacecraftRoute, adminSpacecraftsRoute, adminEditSpacecraftRoute]);
+adminLayoutRoute.addChildren([
+  adminRoute,
+  adminAddSpacecraftRoute,
+  adminSpacecraftsRoute,
+  adminEditSpacecraftRoute,
+]);
 
 export const router = createRouter({ routeTree });

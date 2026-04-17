@@ -2,9 +2,12 @@ import { useParams } from '@tanstack/react-router';
 import { useState, useEffect } from 'react';
 import { API_URL } from '../../config';
 import { BackButton } from '../../components/BackButton';
-import { ShipImage, ShipTitle } from '../../features/ShipHeader';
+import { ShipTitle } from '../../features/ShipHeader';
+import { ImageModal } from '../../components/ImageModal';
 import { ShipDescription } from '../../features/ShipDescription';
 import { ShipSpecs } from '../../features/ShipSpecs';
+import { PageSpinner } from '../../components/PageSpinner';
+import { Error } from '../../components/Error';
 
 const useSpacecraft = id => {
   const [craft, setCraft] = useState(null);
@@ -46,17 +49,17 @@ export const SpacecraftDetail = () => {
   const { id } = useParams({ from: '/spacecraft/$id' });
   const { craft, loading, error, notFound } = useSpacecraft(id);
 
-  if (loading) return <div className="container">Betöltés...</div>;
-  if (error) return <div className="container">Hiba: {error}</div>;
+  if (loading) return <PageSpinner />;
+  if (error) return <Error message={error} />;
   if (notFound || !craft) {
     return (
       <div className="not-found-page">
         <div className="not-found-content">
           <h1>Űrhajó nem található</h1>
           <p>A keresett űrhajó nem létezik vagy már nem elérhető.</p>
-          <a href="/" className="cta-button">
-            Vissza a főoldalra
-          </a>
+          <button onClick={() => window.history.back()} className="back-button">
+            ← Vissza a járművekhez
+          </button>
         </div>
       </div>
     );
@@ -65,10 +68,10 @@ export const SpacecraftDetail = () => {
   return (
     <section className="ship-detail">
       <div className="container">
-        <BackButton type={craft.type} />
+        <BackButton />
 
         <div className="ship-header">
-          <ShipImage image={craft.image} name={craft.name} />
+          <ImageModal src={craft.image} alt={craft.name} />
           <ShipTitle name={craft.name} category={craft.category} tagline={craft.tagline} />
         </div>
 

@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { API_URL } from '../../config';
 import { CategoryHeader } from '../../features/CategoryHeader';
 import { ProductList } from '../../features/ProductList';
+import { PageSpinner } from '../../components/PageSpinner';
+import { Error } from '../../components/Error';
 
 const categoryData = {
   commercial: {
@@ -53,8 +55,8 @@ export const Category = () => {
     fetchSpacecrafts();
   }, [data.type]);
 
-  if (loading) return <div className="container">Betöltés...</div>;
-  if (error) return <div className="container">Hiba: {error}</div>;
+  if (loading) return <PageSpinner />;
+  if (error) return <Error message={error} />;
 
   return (
     <>

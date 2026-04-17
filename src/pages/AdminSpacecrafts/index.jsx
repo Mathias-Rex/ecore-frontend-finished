@@ -117,11 +117,7 @@ export const AdminSpacecrafts = () => {
     <div className="admin-spacecrafts-page">
       <div className="filter-bar">
         <label htmlFor="typeFilter">Szűrő: </label>
-        <select
-          id="typeFilter"
-          value={filter}
-          onChange={e => setFilter(e.target.value)}
-        >
+        <select id="typeFilter" value={filter} onChange={e => setFilter(e.target.value)}>
           {TYPE_FILTERS.map(f => (
             <option key={f.value} value={f.value}>
               {f.label}
@@ -143,11 +139,7 @@ export const AdminSpacecrafts = () => {
           {spacecrafts.map(spacecraft => (
             <tr key={spacecraft.id}>
               <td>
-                <img
-                  src={spacecraft.image}
-                  alt={spacecraft.name}
-                  className="spacecraft-thumb"
-                />
+                <img src={spacecraft.image} alt={spacecraft.name} className="spacecraft-thumb" />
               </td>
               <td>
                 <Link to="/spacecraft/$id" params={{ id: spacecraft.id }}>
@@ -157,24 +149,15 @@ export const AdminSpacecrafts = () => {
               <td>{SPACECRAFT_TYPES[spacecraft.type] || spacecraft.type}</td>
               <td>{spacecraft.active === false ? '❌' : '✅'}</td>
               <td>
-                <button
-                  onClick={() => handleEdit(spacecraft.id)}
-                  className="edit-btn"
-                >
+                <button onClick={() => handleEdit(spacecraft.id)} className="edit-btn">
                   Szerkesztés
                 </button>
                 {spacecraft.active === false ? (
-                  <button
-                    onClick={() => handleRestore(spacecraft.id)}
-                    className="restore-btn"
-                  >
+                  <button onClick={() => handleRestore(spacecraft.id)} className="restore-btn">
                     Visszaállítás
                   </button>
                 ) : (
-                  <button
-                    onClick={() => handleDelete(spacecraft.id)}
-                    className="delete-btn"
-                  >
+                  <button onClick={() => handleDelete(spacecraft.id)} className="delete-btn">
                     Törlés
                   </button>
                 )}

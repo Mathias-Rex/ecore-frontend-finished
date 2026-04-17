@@ -11,8 +11,14 @@ export const AdminAddSpacecraft = () => {
   const { isLoggedIn } = useAuthUnlock();
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { formData, handleChange, handleFeatureChange, addFeature, removeFeature, handleImageChange } =
-    useSpacecraftForm();
+  const {
+    formData,
+    handleChange,
+    handleFeatureChange,
+    addFeature,
+    removeFeature,
+    handleImageChange,
+  } = useSpacecraftForm();
 
   useEffect(() => {
     if (!isLoggedIn) navigate({ to: '/login' });

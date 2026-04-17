@@ -16,8 +16,15 @@ export const AdminEditSpacecraft = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [loading, setLoading] = useState(true);
   const [currentImage, setCurrentImage] = useState('');
-  const { formData, setFormData, handleChange, handleFeatureChange, addFeature, removeFeature, handleImageChange } =
-    useSpacecraftForm();
+  const {
+    formData,
+    setFormData,
+    handleChange,
+    handleFeatureChange,
+    addFeature,
+    removeFeature,
+    handleImageChange,
+  } = useSpacecraftForm();
 
   useEffect(() => {
     if (!isLoggedIn) {
