@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { Link } from '@tanstack/react-router';
 import { useAuthUnlock } from '../context/AuthUnlockContext';
 
-const SEQUENCE = ['E', 'E', 'C', 'R', 'O', 'O'];
+const CORRECT_CODE = '041322';
 
 export const Navbar = () => {
-  const [clickedLetters, setClickedLetters] = useState([]);
+  const [clickedValues, setClickedValues] = useState('');
   const { isUnlocked, setIsUnlocked, isLoggedIn } = useAuthUnlock();
 
   const logoLetters = [
@@ -17,32 +17,27 @@ export const Navbar = () => {
     { letter: 'E', id: 4 },
   ];
 
-  const handleLetterClick = letter => {
+  const handleLetterClick = (letter, id) => {
     if (letter === '-') return;
 
-    if (isLoggedIn) {
+    if (isUnlocked) {
       setIsUnlocked(false);
+      setClickedValues('');
       return;
     }
 
-    const nextIndex = clickedLetters.length;
-    const expectedLetter = SEQUENCE[nextIndex];
+    let newValue = clickedValues + id;
+    const lastSix = newValue.slice(-6);
 
-    if (letter === expectedLetter) {
-      const newClicked = [...clickedLetters, letter];
-      setClickedLetters(newClicked);
+    if (!lastSix.startsWith(CORRECT_CODE.slice(0, lastSix.length))) {
+      newValue = id;
+    }
 
-      const lastSix = newClicked.slice(-6);
-      if (lastSix.join('') === SEQUENCE.join('')) {
-        setIsUnlocked(true);
-        console.log('ok');
-      }
-    } else {
-      if (clickedLetters.length >= 6) {
-        setClickedLetters([]);
-      } else {
-        setClickedLetters([letter]);
-      }
+    setClickedValues(newValue);
+
+    if (newValue === CORRECT_CODE) {
+      setIsUnlocked(true);
+      setClickedValues('');
     }
   };
 
@@ -54,7 +49,7 @@ export const Navbar = () => {
             <img src="/logo.png" alt="E-CORE logo" />
             <span className="logo-text">
               {logoLetters.map(({ letter, id }) => (
-                <span key={id} className="logo-letter" onClick={() => handleLetterClick(letter)}>
+                <span key={id} className="logo-letter" onClick={() => handleLetterClick(letter, id)}>
                   {letter}
                 </span>
               ))}
