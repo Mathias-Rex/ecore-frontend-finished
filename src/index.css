@@ -159,6 +159,11 @@ body {
   padding: 0 20px;
 }
 
+main {
+  position: relative;
+  min-height: calc(100vh - 80px); /* Kiszámolja a Navbar utáni maradék helyet */
+}
+
 /* ==========================================
    NAVIGÁCIÓS SÁV
    ========================================== */
@@ -1709,64 +1714,9 @@ section h2 {
   color: var(--color-primary);
 }
 
-/* Loading overlay */
-.page-spinner-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 60vh;
-}
-
-.loading-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(4, 4, 7, 0.85);
-  backdrop-filter: blur(4px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-.loading-spinner {
-  position: relative;
-  width: 64px;
-  height: 64px;
-}
-
-.spinner-orbit {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  border-top-color: var(--color-primary);
-  border-right-color: var(--color-border-hover);
-  animation: spin 1s linear infinite;
-}
-
-.spinner-core {
-  position: absolute;
-  inset: 16px;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--color-border-hover) 0%, transparent 70%);
-  animation: pulse 1s ease-in-out infinite alternate;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes pulse {
-  from {
-    opacity: 0.4;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1.1);
-  }
+/* Main Content Area */
+main {
+  min-height: calc(100vh - 80px);
 }
 
 .admin-page-wrapper {

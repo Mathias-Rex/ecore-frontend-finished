@@ -11,8 +11,13 @@ import { Admin } from './pages/Admin';
 import { AdminAddSpacecraft } from './pages/AdminAddSpacecraft';
 import { AdminSpacecrafts } from './pages/AdminSpacecrafts';
 import { AdminEditSpacecraft } from './pages/AdminEditSpacecraft';
+import { AdminJobs } from './pages/AdminJobs';
+import { AdminAddJob } from './pages/AdminAddJob';
+import { AdminEditJob } from './pages/AdminEditJob';
 import { Login } from './pages/Login';
 import { API_URL } from './config';
+import { getImage } from './utils/getImage';
+
 
 const categoryTypeMap = {
   commercial: 'commercial',
@@ -29,6 +34,15 @@ const rootRoute = createRootRoute({
 const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/',
+  loader: async () => {
+    const res = await fetch(`${API_URL}/api/illustrations`);
+    const data = await res.json();
+    
+    // Save to global cache for IllustrationContext
+    window.__illustrations = data;
+
+    return data;
+  },
   component: Home,
 });
 
@@ -41,6 +55,11 @@ const aboutusRoute = createRoute({
 const careersRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/careers',
+  loader: async () => {
+    const res = await fetch(`${API_URL}/api/jobs`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return res.json();
+  },
   component: Careers,
 });
 
@@ -110,6 +129,24 @@ const adminEditSpacecraftRoute = createRoute({
   component: AdminEditSpacecraft,
 });
 
+const adminJobsRoute = createRoute({
+  getParentRoute: () => adminLayoutRoute,
+  path: '/jobs',
+  component: AdminJobs,
+});
+
+const adminAddJobRoute = createRoute({
+  getParentRoute: () => adminLayoutRoute,
+  path: '/add-job',
+  component: AdminAddJob,
+});
+
+const adminEditJobRoute = createRoute({
+  getParentRoute: () => adminLayoutRoute,
+  path: '/edit-job/$id',
+  component: AdminEditJob,
+});
+
 const routeTree = rootRoute.addChildren([
   indexRoute,
   aboutusRoute,
@@ -125,6 +162,12 @@ adminLayoutRoute.addChildren([
   adminAddSpacecraftRoute,
   adminSpacecraftsRoute,
   adminEditSpacecraftRoute,
+  adminJobsRoute,
+  adminAddJobRoute,
+  adminEditJobRoute,
 ]);
 
-export const router = createRouter({ routeTree });
+export const router = createRouter({
+  routeTree,
+  defaultStaleTime: 1000 * 60 * 5, // 5 perc cache
+});

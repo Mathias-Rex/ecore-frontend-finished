@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { getImageUrl } from '../utils/getImage';
 
 export const ImageModal = ({ src, alt }) => {
@@ -42,45 +41,35 @@ export const ImageModal = ({ src, alt }) => {
         />
       </div>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className="image-modal-overlay"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            onClick={() => setIsOpen(false)}
+      {isOpen && (
+        <div
+          className="image-modal-overlay"
+          onClick={() => setIsOpen(false)}
+        >
+          <div
+            className="image-modal-content"
+            onClick={e => e.stopPropagation()}
           >
-            <motion.div
-              className="image-modal-content"
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.5, opacity: 0 }}
-              transition={{ duration: 0.3, ease: 'easeOut' }}
-              onClick={e => e.stopPropagation()}
-            >
-              <button className="image-modal-close" onClick={() => setIsOpen(false)}>
-                ✕
-              </button>
-              {!modalLoaded && (
-                <div className="image-spinner-overlay">
-                  <div className="loading-spinner">
-                    <div className="spinner-orbit" />
-                    <div className="spinner-core" />
-                  </div>
+            <button className="image-modal-close" onClick={() => setIsOpen(false)}>
+              ✕
+            </button>
+            {!modalLoaded && (
+              <div className="image-spinner-overlay">
+                <div className="loading-spinner">
+                  <div className="spinner-orbit" />
+                  <div className="spinner-core" />
                 </div>
-              )}
-              <img
-                src={fullUrl}
-                alt={alt}
-                style={{ opacity: modalLoaded ? 1 : 0 }}
-                onLoad={() => setModalLoaded(true)}
-              />
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              </div>
+            )}
+            <img
+              src={fullUrl}
+              alt={alt}
+              style={{ opacity: modalLoaded ? 1 : 0, transition: 'opacity 0.3s' }}
+              onLoad={() => setModalLoaded(true)}
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 };

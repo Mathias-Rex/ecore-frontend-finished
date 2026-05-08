@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Link, useLocation } from '@tanstack/react-router';
-import { motion } from 'framer-motion';
 import { useAuthUnlock } from '../context/AuthUnlockContext';
 
 const CORRECT_CODE = '041322';
@@ -67,18 +66,18 @@ export const Navbar = () => {
         <div className="logo">
           <Link to="/">
             <img src="/logo.png" alt="E-CORE logo" />
-            <span className="logo-text">
-              {logoLetters.map(({ letter, id }) => (
-                <span
-                  key={id}
-                  className="logo-letter"
-                  onClick={() => handleLetterClick(letter, id)}
-                >
-                  {letter}
-                </span>
-              ))}
-            </span>
           </Link>
+          <span className="logo-text">
+            {logoLetters.map(({ letter, id }) => (
+              <span
+                key={id}
+                className="logo-letter"
+                onClick={() => handleLetterClick(letter, id)}
+              >
+                {letter}
+              </span>
+            ))}
+          </span>
         </div>
         <div className="hamburger" id="hamburger">
           <span></span>
@@ -93,11 +92,7 @@ export const Navbar = () => {
                 <Link to={to} activeProps={{ className: 'active' }} activeOptions={exact ? { exact: true } : undefined}>
                   {label}
                   {active && (
-                    <motion.span
-                      layoutId="nav-active-indicator"
-                      className="nav-active-indicator"
-                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                    />
+                    <span className="nav-active-indicator" />
                   )}
                 </Link>
               </li>

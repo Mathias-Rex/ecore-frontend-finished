@@ -33,7 +33,13 @@ export const AdminLayout = () => {
               Űrhajó hozzáadása
             </Link>
             <Link to="/admin/spacecrafts" className="admin-header-link">
-              Űrhajók szerkesztése
+              Űrhajók kezelése
+            </Link>
+            <Link to="/admin/add-job" className="admin-header-link">
+              Állás hozzáadása
+            </Link>
+            <Link to="/admin/jobs" className="admin-header-link">
+              Állások kezelése
             </Link>
           </div>
           <button onClick={handleLogout} className="admin-header-logout">
