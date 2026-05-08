@@ -66,18 +66,21 @@ export const Navbar = () => {
         <div className="logo">
           <Link to="/">
             <img src="/logo.png" alt="E-CORE logo" />
+            <span className="logo-text">
+              {logoLetters.map(({ letter, id }) => (
+                <span
+                  key={id}
+                  className="logo-letter"
+                  onClick={e => {
+                    e.preventDefault();
+                    handleLetterClick(letter, id);
+                  }}
+                >
+                  {letter}
+                </span>
+              ))}
+            </span>
           </Link>
-          <span className="logo-text">
-            {logoLetters.map(({ letter, id }) => (
-              <span
-                key={id}
-                className="logo-letter"
-                onClick={() => handleLetterClick(letter, id)}
-              >
-                {letter}
-              </span>
-            ))}
-          </span>
         </div>
         <div className="hamburger" id="hamburger">
           <span></span>
