@@ -41,18 +41,21 @@ export const Navbar = () => {
       return;
     }
 
-    let newValue = clickedValues + id;
-    const lastSix = newValue.slice(-6);
+    const nextValue = clickedValues + id;
 
-    if (!lastSix.startsWith(CORRECT_CODE.slice(0, lastSix.length))) {
-      newValue = id;
-    }
-
-    setClickedValues(newValue);
-
-    if (newValue === CORRECT_CODE) {
-      setIsUnlocked(true);
-      setClickedValues('');
+    if (CORRECT_CODE.startsWith(nextValue)) {
+      setClickedValues(nextValue);
+      if (nextValue === CORRECT_CODE) {
+        setIsUnlocked(true);
+        setClickedValues('');
+      }
+    } else {
+      // Ha rontás van, megnézzük, hogy az aktuális kattintás-e a kód kezdete
+      if (CORRECT_CODE.startsWith(String(id))) {
+        setClickedValues(String(id));
+      } else {
+        setClickedValues('');
+      }
     }
   };
 
